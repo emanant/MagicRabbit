@@ -1,0 +1,256 @@
+body,
+canvas,
+div {
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    -khtml-user-select: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+#gameCanvas {
+    display: none;
+}
+
+.loader {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-color: #274E6E;
+}
+
+.sub-loader {
+    font-size: 90px;
+    text-indent: -9999em;
+    overflow: hidden;
+    width: 1em;
+    height: 1em;
+    border-radius: 50%;
+    margin: 15% auto;
+    position: relative;
+    -webkit-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-animation: load6 1.7s infinite ease;
+    animation: load6 1.7s infinite ease;
+}
+
+@-webkit-keyframes load6 {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+        box-shadow: 0 -0.83em 0 -0.4em #ffffff, 0 -0.83em 0 -0.42em #ffffff, 0 -0.83em 0 -0.44em #ffffff, 0 -0.83em 0 -0.46em #ffffff, 0 -0.83em 0 -0.477em #ffffff;
+    }
+    5%,
+    95% {
+        box-shadow: 0 -0.83em 0 -0.4em #ffffff, 0 -0.83em 0 -0.42em #ffffff, 0 -0.83em 0 -0.44em #ffffff, 0 -0.83em 0 -0.46em #ffffff, 0 -0.83em 0 -0.477em #ffffff;
+    }
+    10%,
+    59% {
+        box-shadow: 0 -0.83em 0 -0.4em #ffffff, -0.087em -0.825em 0 -0.42em #ffffff, -0.173em -0.812em 0 -0.44em #ffffff, -0.256em -0.789em 0 -0.46em #ffffff, -0.297em -0.775em 0 -0.477em #ffffff;
+    }
+    20% {
+        box-shadow: 0 -0.83em 0 -0.4em #ffffff, -0.338em -0.758em 0 -0.42em #ffffff, -0.555em -0.617em 0 -0.44em #ffffff, -0.671em -0.488em 0 -0.46em #ffffff, -0.749em -0.34em 0 -0.477em #ffffff;
+    }
+    38% {
+        box-shadow: 0 -0.83em 0 -0.4em #ffffff, -0.377em -0.74em 0 -0.42em #ffffff, -0.645em -0.522em 0 -0.44em #ffffff, -0.775em -0.297em 0 -0.46em #ffffff, -0.82em -0.09em 0 -0.477em #ffffff;
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+        box-shadow: 0 -0.83em 0 -0.4em #ffffff, 0 -0.83em 0 -0.42em #ffffff, 0 -0.83em 0 -0.44em #ffffff, 0 -0.83em 0 -0.46em #ffffff, 0 -0.83em 0 -0.477em #ffffff;
+    }
+}
+
+@keyframes load6 {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+        box-shadow: 0 -0.83em 0 -0.4em #ffffff, 0 -0.83em 0 -0.42em #ffffff, 0 -0.83em 0 -0.44em #ffffff, 0 -0.83em 0 -0.46em #ffffff, 0 -0.83em 0 -0.477em #ffffff;
+    }
+    5%,
+    95% {
+        box-shadow: 0 -0.83em 0 -0.4em #ffffff, 0 -0.83em 0 -0.42em #ffffff, 0 -0.83em 0 -0.44em #ffffff, 0 -0.83em 0 -0.46em #ffffff, 0 -0.83em 0 -0.477em #ffffff;
+    }
+    10%,
+    59% {
+        box-shadow: 0 -0.83em 0 -0.4em #ffffff, -0.087em -0.825em 0 -0.42em #ffffff, -0.173em -0.812em 0 -0.44em #ffffff, -0.256em -0.789em 0 -0.46em #ffffff, -0.297em -0.775em 0 -0.477em #ffffff;
+    }
+    20% {
+        box-shadow: 0 -0.83em 0 -0.4em #ffffff, -0.338em -0.758em 0 -0.42em #ffffff, -0.555em -0.617em 0 -0.44em #ffffff, -0.671em -0.488em 0 -0.46em #ffffff, -0.749em -0.34em 0 -0.477em #ffffff;
+    }
+    38% {
+        box-shadow: 0 -0.83em 0 -0.4em #ffffff, -0.377em -0.74em 0 -0.42em #ffffff, -0.645em -0.522em 0 -0.44em #ffffff, -0.775em -0.297em 0 -0.46em #ffffff, -0.82em -0.09em 0 -0.477em #ffffff;
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+        box-shadow: 0 -0.83em 0 -0.4em #ffffff, 0 -0.83em 0 -0.42em #ffffff, 0 -0.83em 0 -0.44em #ffffff, 0 -0.83em 0 -0.46em #ffffff, 0 -0.83em 0 -0.477em #ffffff;
+    }
+}
+
+#Cocos2dGameContainer {
+    box-shadow: 0px 0px 30px 3px #000;
+}
+
+#errorUIDiv {
+    position: absolute;
+    z-index: 1;
+    background-color: #8FD7D5;
+}
+
+#buttonRow {
+    position: relative;
+    width: 100%;
+    bottom: 0px;
+}
+
+.parent {
+    display: table;
+    table-layout: fixed;
+}
+
+#buttonRow {
+    position: absolute;
+    bottom: 10%;
+}
+
+.hide {
+    display: none;
+}
+
+.show {
+    display: inherit;
+}
+
+.errBtn {
+    background-color: #5A8A88;
+    border: none;
+    outline: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.errBtn:hover {
+    background-color: #75B1AF;
+}
+
+.vcenter {
+    top: 50%;
+    transform: translate(0, -50%);
+}
+
+#errorUIRow1 {
+    height: 35%;
+    z-index: 1;
+}
+
+
+@media screen and (min-width: 1200px) {
+    /* lg */
+    #message {
+        font-size: 1.3em
+    }
+    div.errDivTopPadding {
+        padding-top: 1%;
+    }
+    .errBtnSize {
+        font-size: 16px;
+        padding: 16px 0px;
+        width: 150px;
+    }
+    .errBtn:active {
+        padding: 15.5px 15.5px;
+        font-size: 15.5px;
+    }
+    div.errUIDivDim {
+        left: 30%;
+        top: 30%;
+        height: 40%;
+        width: 40%;
+    }
+}
+
+@media screen and (max-width: 1199px) and (min-width: 992px) {
+    /* md */
+    #message {
+        font-size: 1.3em
+    }
+    div.errDivTopPadding {
+        padding-top: 1%;
+    }
+    .errBtnSize {
+        font-size: 16px;
+        padding: 16px 0px;
+        width: 150px;
+    }
+    .errBtn:active {
+        padding: 15.5px 15.5px;
+        font-size: 15.5px;
+    }
+    div.errUIDivDim {
+        left: 30%;
+        top: 30%;
+        height: 40%;
+        width: 40%;
+    }
+}
+
+@media screen and (max-width: 991px) and (min-width: 768px) {
+    /* sm */
+    #message {
+        font-size: 1.3em
+    }
+    #notes {
+        font-size: 0.9em
+    }
+    div.errDivTopPadding {
+        padding-top: 1%;
+    }
+    .errBtnSize {
+        font-size: 16px;
+        padding: 16px 0px;
+        width: 150px;
+    }
+    .errBtn:active {
+        padding: 15.5px 15.5px;
+        font-size: 15.5px;
+    }
+    div.errUIDivDim {
+        left: 30%;
+        top: 30%;
+        height: 40%;
+        width: 40%;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    /* xs */
+    #message {
+        font-size: 0.8em
+    }
+    #notes {
+        font-size: 0.7em
+    }
+    div.errDivTopPadding {
+        padding-top: 0%;
+    }
+    .errBtnSize {
+        font-size: 12px;
+        padding: 15% 0px;
+        width: 105%;
+    }
+    .errBtn:active {
+        padding: 14.5% 0px 14.5% 0px;
+        font-size: 11.5px;
+    }
+    div.errUIDivDim {
+        left: 30%;
+        top: 35%;
+        height: 30%;
+        width: 40%;
+    }
+}

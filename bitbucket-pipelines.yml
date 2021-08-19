@@ -1,0 +1,29 @@
+image: node:10.16  #npm version = 6.9.0,  yarn version = 1.16.0
+clone:
+  depth: 3 #include only the most recent commit, we don't need history
+  lfs: true #download the lfs files...we don't just want the pointers
+
+pipelines:
+  branches:
+    master: #only build on the master branch
+      - step:
+          name: Build, test, and package
+          script:
+            - npm config set scripts-prepend-node-path auto
+            - npm cache verify
+            - npm install --unsafe-perm --verbose --timing
+            - npm test
+            - npm run build
+          artifacts:
+            - build/**
+      - step: #separate step required as we can only load one Docker image
+          name: Upload AWS S3
+          caches:
+            - pip
+          image: python:3.5.1
+          deployment: test
+          script:
+            - pip install awscli
+            - export AWS_ACCESS_KEY_ID="${QA_AWS_ACCESS_KEY_ID}"
+            - export AWS_SECRET_ACCESS_KEY="${QA_AWS_SECRET_ACCESS_KEY}"
+            - ./s3-exercise-cp.sh "${EXERCISE_LAUNCH_NAME}" "${BITBUCKET_BUILD_NUMBER}"

@@ -1,0 +1,15 @@
+{
+  "name": "ts-template",
+  "version": false,
+  "dependencies": {
+    "bluebird": "registry:npm/bluebird#3.4.1+20160909132857",
+    "lodash": "registry:npm/lodash#4.0.0+20161015015725"
+  },
+  "globalDependencies": {
+    "cocos2d": "file:./cocos2d/typings.json",
+    "jquery": "registry:dt/jquery#1.10.0+20160929162922"
+  },
+  "globalDevDependencies": {
+    "jest": "registry:dt/jest#16.0.0+20161025131017"
+  }
+}

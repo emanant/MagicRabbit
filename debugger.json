@@ -1,0 +1,115 @@
+{
+    "State Info": [
+        {
+            "name": "FREQUENCY 1000",
+            "type": "text",
+            "model": "frequency1000"
+        },
+        {
+            "name": "FREQUENCY 2000",
+            "type": "text",
+            "model": "frequency2000"
+        },
+        {
+            "name": "FREQUENCY 500",
+            "type": "text",
+            "model": "frequency500"
+        },
+        {
+            "name": "CURRENT SET",
+            "type": "text",
+            "model": "currentSet"
+        },
+        {
+            "name": "PERCENT THROUGH",
+            "type": "text",
+            "model": "percentThrough"
+        },
+        {
+            "name": "REVERSALS",
+            "type": "text",
+            "model": "reversals"
+        },
+        {
+            "name": "REVERSALS EXTENDED",
+            "type": "text",
+            "model": "reversalsExtended"
+        },
+        {
+            "name": "TRACKING",
+            "type": "text",
+            "model": "tracking"
+        },
+        {
+            "name": "TRIALS IN MEMORY",
+            "type": "text",
+            "model": "trialsInMemory"
+        },
+        {
+            "name": "UNIT STATUS",
+            "type": "text",
+            "model": "unitStatus"
+        },
+        {
+            "name": "MACHINE STATUS",
+            "type": "text",
+            "model": "machineStatus"
+        }
+    ],
+    "Logs": [
+        {
+            "name": "",
+            "type": "text",
+            "model": "logs"
+        }
+    ],
+    "Debug Keys": [
+        {
+            "name": "Available Debug Keys",
+            "type": "text",
+            "model": "availableDebugKeys"
+        },
+        {
+            "name": "C",
+            "type": "text",
+            "model": "key 1",
+            "value": "Correct trial with feedback"
+        },
+        {
+            "name": "I",
+            "type": "text",
+            "model": "key 2",
+            "value": "Incorrect trial with feedback"
+        },
+        {
+            "name": "[",
+            "type": "text",
+            "model": "key 3",
+            "value": "Correct trial minimal with feedback"
+        },
+        {
+            "name": "]",
+            "type": "text",
+            "model": "key 4",
+            "value": "Incorrect trial minimal with feedback"
+        },
+        {
+            "name": "R",
+            "type": "text",
+            "model": "key 7",
+            "value": "Clear keys to be processed"
+        },
+        {
+            "name": "Key List Input",
+            "type": "textarea",
+            "model": "keyListInput"
+        }
+    ],
+    "Error Info": [
+        {
+            "name": "Error Info",
+            "type": "text",
+            "model": "error"
+        }
+    ]
+}

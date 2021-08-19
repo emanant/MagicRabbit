@@ -1,0 +1,17 @@
+{
+    "project_type": "javascript",
+    "debugMode": 1,
+    "showFPS": false,
+    "frameRate": 60,
+    "noCache": false,
+    "id": "gameCanvas",
+    "renderMode": 0,
+    "width": 800,
+    "height": 600,
+    "engineDir": "node_modules/cocos2d-html5",
+    "modules": [
+        "node_modules/cocos2d-typescript-definitions"
+    ],
+    "jsList": [
+    ]
+}

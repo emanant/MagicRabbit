@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>BuzzFlyHC</title>
+    <meta name="viewport" content="width=480, initial-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="full-screen" content="yes" />
+    <meta name="screen-orientation" content="portrait" />
+    <meta name="x5-fullscreen" content="true" />
+    <meta name="360-fullscreen" content="true" />
+    <link rel="stylesheet" href="./styles.css" />
+</head>
+
+<body style="padding:0; margin: 0; background: #000;">
+    <div id="cocosLoading" class="loader">
+        <div class="sub-loader">Loading...</div>
+    </div>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <canvas id="gameCanvas" width="480" height="720"></canvas>
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="node_modules/@scilearn/ngffwd-node-processes/frameworks/cocos2d-html5/cocos2d-js-min.js" charset="UTF-8"></script>
+    <script type="text/javascript" src="node_modules/@scilearn/ngffwd-node-processes/lib/flax-min.js" charset="UTF-8"></script>
+    <script src="vendor.js"></script>
+    <script src="main.js"></script>
+    <div id="errorUIDiv" class="container errDivTopPadding errUIDivDim hide">
+        </br>
+        <div class="row" id="errorUIRow1">
+            <div class="vcenter col-xs-3 col-sm-3 col-md-3 col-lg-2">
+                <img class="img-responsive" src="https://upload.wikimedia.org/wikipedia/commons/2/24/Warning_icon.svg">
+            </div>
+            <div id="message" class="vcenter col-xs-9 col-sm-9 col-md-9 col-lg-10">
+                <p>There is a problem with FastForWord. Please report this to Support. You may reload or quit and login again.</p>
+            </div>
+        </div>
+        <div class="row" id="errorUIRow2">
+            <div class="col-xs-3 col-sm-3 col-md-3 col-lg-2"></div>
+            <div id="notes" class="col-xs-9 col-sm-9 col-md-9 col-lg-10 center-block">
+                <p id="noteText">Request ID </p>
+            </div>
+        </div>
+        <div class="row container" id="buttonRow">
+            <div id="divErrBtn1" class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                <button id="errBtn1" type="button" onclick="errorUIButtonClicked(1)" class="errBtn errBtnSize center-block">success</button>
+            </div>
+            <div id="divErrBtn2" class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                <button id="errBtn2" type="button" onclick="errorUIButtonClicked(2)" class="errBtn errBtnSize center-block">warning</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

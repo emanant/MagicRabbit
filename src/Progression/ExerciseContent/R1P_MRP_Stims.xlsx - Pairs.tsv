@@ -1,0 +1,681 @@
+#	Level-id	Task	Foil-level	Position	Category	Block	Set	Item	trial-id	Stimulus	Target	Foil1	Foil2	Foil3	root	Foilword1	Foilword2	Foilword3	Probe
+1	1	1	easy	initial	g	1	1	1	101101	got	g	t	m	s	ot	tot	mot	sot	hot
+2	1	1	easy	initial	g	1	1	2	101102	gum	g	t	m	s	um	tum	mum	sum	hum
+3	1	1	easy	initial	g	1	1	3	101103	gag	g	t	m	s	ag	tag	mag	sag	sag
+4	1	1	easy	initial	g	1	1	4	101104	gab	g	t	m	s	ab	tab	mab	sab	tab
+5	1	1	easy	initial	g	1	1	5	101105	gut	g	t	m	s	ut	tut	mut	sut	but
+6	1	1	easy	initial	g	1	1	6	101106	gap	g	t	m	s	ap	tap	map	sap	nap
+7	1	1	easy	initial	g	1	1	7	101107	get	g	t	m	s	et	tet	met	set	met
+8	1	1	easy	initial	g	1	1	8	101108	gate	g	t	m	s	ate	tate	mate	sate	late
+9	1	1	easy	initial	g	1	1	9	101109	game	g	t	m	s	ame	tame	mame	same	same
+10	1	1	easy	initial	g	1	1	10	101110	gave	g	t	m	s	ave	tave	mave	save	save
+11	1	1	easy	initial	m	1	2	1	101201	mug	m	t	s	g	ug	tug	sug	gug	tug
+12	1	1	easy	initial	m	1	2	2	101202	man	m	t	s	g	an	tan	san	gan	can
+13	1	1	easy	initial	m	1	2	3	101203	men	m	t	s	g	en	ten	sen	gen	pen
+14	1	1	easy	initial	m	1	2	4	101204	met	m	t	s	g	et	tet	set	get	set
+15	1	1	easy	initial	m	1	2	5	101205	mat	m	t	s	g	at	tat	sat	gat	sat
+16	1	1	easy	initial	m	1	2	6	101206	map	m	t	s	g	ap	tap	sap	gap	tap
+17	1	1	easy	initial	m	1	2	7	101207	mad	m	t	s	g	ad	tad	sad	gad	sad
+18	1	1	easy	initial	m	1	2	8	101208	mud	m	t	s	g	ud	tud	sud	gud	bud
+19	1	1	easy	initial	m	1	2	9	101209	make	m	t	s	g	ake	take	sake	gake	take
+20	1	1	easy	initial	m	1	2	10	101210	mine	m	t	s	g	ine	tine	sine	gine	fine
+21	1	1	easy	initial	s	1	3	1	101301	sag	s	t	m	g	ag	tag	mag	gag	tag
+22	1	1	easy	initial	s	1	3	2	101302	set	s	t	m	g	et	tet	met	get	get
+23	1	1	easy	initial	s	1	3	3	101303	sit	s	b	m	g	it	bit	mit	git	pit
+24	1	1	easy	initial	s	1	3	4	101304	sip	s	t	m	g	ip	tip	mip	gip	tip
+25	1	1	easy	initial	s	1	3	5	101305	sap	s	t	m	g	ap	tap	map	gap	map
+26	1	1	easy	initial	s	1	3	6	101306	sad	s	t	m	g	ad	tad	mad	gad	bad
+27	1	1	easy	initial	s	1	3	7	101307	sat	s	t	m	g	at	tat	mat	gat	hat
+28	1	1	easy	initial	s	1	3	8	101308	sum	s	t	m	g	um	tum	mum	gum	gum
+29	1	1	easy	initial	s	1	3	9	101309	same	s	t	m	g	ame	tame	mame	game	tame
+30	1	1	easy	initial	s	1	3	10	101310	side	s	t	m	g	ide	tide	mide	gide	tide
+31	1	1	easy	initial	t	1	4	1	101401	tug	t	s	m	g	ug	sug	mug	gug	bug
+32	1	1	easy	initial	t	1	4	2	101402	tag	t	s	m	g	ag	sag	mag	gag	bag
+33	1	1	easy	initial	t	1	4	3	101403	top	t	s	m	g	op	sop	mop	gop	pop
+34	1	1	easy	initial	t	1	4	4	101404	tip	t	s	m	g	ip	sip	mip	gip	zip
+35	1	1	easy	initial	t	1	4	5	101405	tin	t	s	m	g	in	sin	min	gin	pin
+36	1	1	easy	initial	t	1	4	6	101406	tan	t	s	m	g	an	san	man	gan	man
+37	1	1	easy	initial	t	1	4	7	101407	ten	t	s	m	g	en	sen	men	gen	hen
+38	1	1	easy	initial	t	1	4	8	101408	take	t	s	m	g	ake	sake	make	gake	bake
+39	1	1	easy	initial	t	1	4	9	101409	tape	t	s	m	g	ape	sape	mape	gape	cape
+40	1	1	easy	initial	t	1	4	10	101410	time	t	s	m	g	ime	sime	mime	gime	lime
+41	1	1	easy	initial	d	2	1	1	102101	did	d	c	r	f	id	cid	rid	fid	hid
+42	1	1	easy	initial	d	2	1	2	102102	dad	d	c	r	f	ad	cad	rad	fad	had
+43	1	1	easy	initial	d	2	1	3	102103	dot	d	c	r	f	ot	cot	rot	fot	got
+44	1	1	easy	initial	d	2	1	4	102104	dig	d	c	r	f	ig	cig	rig	fig	big
+45	1	1	easy	initial	d	2	1	5	102105	dip	d	c	r	f	ip	cip	rip	fip	rip
+46	1	1	easy	initial	d	2	1	6	102106	den	d	c	r	f	en	cen	ren	fen	men
+47	1	1	easy	initial	d	2	1	7	102107	dim	d	c	r	f	im	cim	rim	fim	him
+48	1	1	easy	initial	d	2	1	8	102108	dime	d	c	r	f	ime	cime	rime	fime	time
+49	1	1	easy	initial	d	2	1	9	102109	date	d	c	r	f	ate	cate	rate	fate	rate
+50	1	1	easy	initial	d	2	1	10	102110	dude	d	c	r	f	ude	cude	rude	fude	rude
+51	1	1	easy	initial	c	2	2	1	102201	cab	c	d	r	f	ab	dab	rab	fab	tab
+52	1	1	easy	initial	c	2	2	2	102202	can	c	d	r	f	an	dan	ran	fan	man
+53	1	1	easy	initial	c	2	2	3	102203	cat	c	d	r	f	at	dat	rat	fat	bat
+54	1	1	easy	initial	c	2	2	4	102204	cap	c	d	r	f	ap	dap	rap	fap	gap
+55	1	1	easy	initial	c	2	2	5	102205	cop	c	d	r	f	op	dop	rop	fop	top
+56	1	1	easy	initial	c	2	2	6	102206	cut	c	d	r	f	ut	dut	rut	fut	nut
+57	1	1	easy	initial	c	2	2	7	102207	cave	c	d	r	f	ave	dave	rave	fave	save
+58	1	1	easy	initial	c	2	2	8	102208	cone	c	d	r	f	one	done	rone	fone	bone
+59	1	1	easy	initial	c	2	2	9	102209	cake	c	d	r	f	ake	dake	rake	fake	take
+60	1	1	easy	initial	c	2	2	10	102210	came	c	d	r	f	ame	dame	rame	fame	name
+61	1	1	easy	initial	r	2	3	1	102301	red	r	c	d	f	ed	ced	ded	fed	bed
+62	1	1	easy	initial	r	2	3	2	102302	rip	r	c	d	f	ip	cip	dip	fip	tip
+63	1	1	easy	initial	r	2	3	3	102303	rag	r	c	d	s	ag	cag	dag	sag	tag
+64	1	1	easy	initial	r	2	3	4	102304	run	r	c	d	f	un	cun	dun	fun	fun
+65	1	1	easy	initial	r	2	3	5	102305	ran	r	c	d	f	an	can	dan	fan	man
+66	1	1	easy	initial	r	2	3	6	102306	rat	r	c	d	f	at	cat	dat	fat	cat
+67	1	1	easy	initial	r	2	3	7	102307	rot	r	c	d	f	ot	cot	dot	fot	lot
+68	1	1	easy	initial	r	2	3	8	102308	rim	r	c	d	f	im	cim	dim	fim	dim
+69	1	1	easy	initial	r	2	3	9	102309	rake	r	c	d	f	ake	cake	dake	fake	lake
+70	1	1	easy	initial	r	2	3	10	102310	rope	r	c	s	f	ope	cope	sope	fope	hope
+71	1	1	easy	initial	f	2	4	1	102401	fit	f	r	c	d	it	rit	cit	dit	bit
+72	1	1	easy	initial	f	2	4	2	102402	fed	f	r	c	d	ed	red	ced	ded	led
+73	1	1	easy	initial	f	2	4	3	102403	fan	f	r	c	d	an	ran	can	dan	can
+74	1	1	easy	initial	f	2	4	4	102404	fig	f	r	c	d	ig	rig	cig	dig	dig
+75	1	1	easy	initial	f	2	4	5	102405	fat	f	r	c	d	at	rat	cat	dat	bat
+76	1	1	easy	initial	f	2	4	6	102406	fog	f	r	c	d	og	rog	cog	dog	dog
+77	1	1	easy	initial	f	2	4	7	102407	fin	f	r	c	d	in	rin	cin	din	win
+78	1	1	easy	initial	f	2	4	8	102408	fun	f	r	c	d	un	run	cun	dun	sun
+79	1	1	easy	initial	f	2	4	9	102409	fad	f	r	c	d	ad	rad	cad	dad	mad
+80	1	1	easy	initial	f	2	4	10	102410	fade	f	r	c	d	ade	rade	cade	dade	made
+81	1	1	easy	initial	p	3	1	1	103101	pit	p	l	h	j	it	lit	hit	jit	bit
+82	1	1	easy	initial	p	3	1	2	103102	pin	p	l	h	j	in	lin	hin	jin	fin
+83	1	1	easy	initial	p	3	1	3	103103	pen	p	l	h	j	en	len	hen	jen	hen
+84	1	1	easy	initial	p	3	1	4	103104	pan	p	l	h	j	an	lan	han	jan	man
+85	1	1	easy	initial	p	3	1	5	103105	pat	p	l	h	j	at	lat	hat	jat	bat
+86	1	1	easy	initial	p	3	1	6	103106	pot	p	l	h	j	ot	lot	hot	jot	hot
+87	1	1	easy	initial	p	3	1	7	103107	pet	p	l	h	j	et	let	het	jet	let
+88	1	1	easy	initial	p	3	1	8	103108	pop	p	l	h	j	op	lop	hop	jop	top
+89	1	1	easy	initial	p	3	1	9	103109	pup	p	l	h	j	up	lup	hup	jup	cup
+90	1	1	easy	initial	p	3	1	10	103110	pipe	p	l	h	j	ipe	lipe	hipe	jipe	ripe
+91	1	1	easy	initial	l	3	2	1	103201	lot	l	p	h	j	ot	pot	hot	jot	dot
+92	1	1	easy	initial	l	3	2	2	103202	let	l	p	h	j	et	pet	het	jet	net
+93	1	1	easy	initial	l	3	2	3	103203	lit	l	p	h	j	it	pit	hit	jit	bit
+94	1	1	easy	initial	l	3	2	4	103204	lap	l	p	h	c	ap	pap	hap	cap	tap
+95	1	1	easy	initial	l	3	2	5	103205	lip	l	p	h	j	ip	pip	hip	jip	hip
+96	1	1	easy	initial	l	3	2	6	103206	led	l	p	h	j	ed	ped	hed	jed	fed
+97	1	1	easy	initial	l	3	2	7	103207	live	l	p	h	j	ive	pive	hive	jive	dive
+98	1	1	easy	initial	l	3	2	8	103208	like	l	p	h	j	ike	pike	hike	jike	bike
+99	1	1	easy	initial	l	3	2	9	103209	lone	l	p	h	j	one	pone	hone	jone	cone
+100	1	1	easy	initial	l	3	2	10	103210	log	l	p	h	j	og	pog	hog	jog	fog
+101	1	1	easy	initial	h	3	3	1	103301	hot	h	p	j	l	ot	pot	jot	lot	not
+102	1	1	easy	initial	h	3	3	2	103302	hit	h	p	j	l	it	pit	jit	lit	kit
+103	1	1	easy	initial	h	3	3	3	103303	him	h	p	j	l	im	pim	jim	lim	dim
+104	1	1	easy	initial	h	3	3	4	103304	ham	h	p	j	l	am	pam	jam	lam	jam
+105	1	1	easy	initial	h	3	3	5	103305	had	h	p	j	l	ad	pad	jad	lad	fad
+106	1	1	easy	initial	h	3	3	6	103306	hen	h	p	j	l	en	pen	jen	len	men
+107	1	1	easy	initial	h	3	3	7	103307	hug	h	p	j	l	ug	pug	jug	lug	jug
+108	1	1	easy	initial	h	3	3	8	103308	hat	h	p	j	l	at	pat	jat	lat	sat
+109	1	1	easy	initial	h	3	3	9	103309	hope	h	b	j	l	ope	bope	jope	lope	rope
+110	1	1	easy	initial	h	3	3	10	103310	hide	h	p	j	l	ide	pide	jide	lide	side
+111	1	1	easy	initial	j	3	4	1	103401	jog	j	p	h	l	og	pog	hog	log	dog
+112	1	1	easy	initial	j	3	4	2	103402	jig	j	p	h	l	ig	pig	hig	lig	dig
+113	1	1	easy	initial	j	3	4	3	103403	jag	j	p	h	l	ag	pag	hag	lag	rag
+114	1	1	easy	initial	j	3	4	4	103404	jam	j	p	h	l	am	pam	ham	lam	ram
+115	1	1	easy	initial	j	3	4	5	103405	jab	j	p	h	l	ab	pab	hab	lab	lab
+116	1	1	easy	initial	j	3	4	6	103406	jog	j	p	h	l	og	pog	hog	log	log
+117	1	1	easy	initial	j	3	4	7	103407	jot	j	p	h	l	ot	pot	hot	lot	hot
+118	1	1	easy	initial	j	3	4	8	103408	jet	j	p	h	l	et	pet	het	let	set
+119	1	1	easy	initial	j	3	4	9	103409	joke	j	p	h	l	oke	poke	hoke	loke	poke
+120	1	1	easy	initial	j	3	4	10	103410	jug	j	p	h	l	ug	pug	hug	lug	rug
+121	1	1	easy	initial	b	4	1	1	104101	bed	b	k	n	w	ed	ked	ned	wed	red
+122	1	1	easy	initial	b	4	1	2	104102	but	b	k	n	w	ut	kut	nut	wut	nut
+123	1	1	easy	initial	b	4	1	3	104103	bat	b	k	n	w	at	kat	nat	wat	hat
+124	1	1	easy	initial	b	4	1	4	104104	bug	b	k	n	w	ug	kug	nug	wug	tug
+125	1	1	easy	initial	b	4	1	5	104105	bag	b	k	n	w	ag	kag	nag	wag	wag
+126	1	1	easy	initial	b	4	1	6	104106	bib	b	k	n	w	ib	kib	nib	wib	rib
+127	1	1	easy	initial	b	4	1	7	104107	bad	b	k	n	w	ad	kad	nad	wad	had
+128	1	1	easy	initial	b	4	1	8	104108	big	b	k	n	w	ig	kig	nig	wig	wig
+129	1	1	easy	initial	b	4	1	9	104109	bake	b	k	n	w	ake	kake	nake	wake	cake
+130	1	1	easy	initial	b	4	1	10	104110	bone	b	k	n	w	one	kone	none	wone	cone
+131	1	1	easy	initial	k	4	2	1	104201	keg	k	b	n	w	eg	beg	neg	weg	beg
+132	1	1	easy	initial	k	4	2	2	104202	kid	k	b	n	w	id	bid	nid	wid	bid
+133	1	1	easy	initial	k	4	2	3	104203	kin	k	b	n	w	in	bin	nin	win	win
+134	1	1	easy	initial	k	4	2	4	104204	kit	k	b	n	w	it	bit	nit	wit	bit
+135	1	1	easy	initial	k	4	2	5	104205	kale	k	b	n	w	ale	bale	nale	wale	sale
+136	1	1	easy	initial	k	4	2	6	104206	kite	k	b	n	w	ite	bite	nite	wite	site
+137	1	1	easy	initial	k	4	2	7	104207	keg	k	b	n	w	eg	beg	neg	weg	leg
+138	1	1	easy	initial	k	4	2	8	104208	kid	k	b	n	w	id	bid	nid	wid	hid
+139	1	1	easy	initial	k	4	2	9	104209	kite	k	b	n	w	ite	bite	nite	wite	bite
+140	1	1	easy	initial	k	4	2	10	104210	kit	k	b	n	w	it	bit	nit	wit	wit
+141	1	1	easy	initial	n	4	3	1	104301	not	n	b	k	w	ot	bot	kot	wot	hot
+142	1	1	easy	initial	n	4	3	2	104302	nod	n	b	k	w	od	bod	kod	wod	pod
+143	1	1	easy	initial	n	4	3	3	104303	nab	n	b	k	w	ab	bab	kab	wab	lab
+144	1	1	easy	initial	n	4	3	4	104304	nag	n	b	k	w	ag	bag	kag	wag	wag
+145	1	1	easy	initial	n	4	3	5	104305	nap	n	b	k	w	ap	bap	kap	wap	map
+146	1	1	easy	initial	n	4	3	6	104306	nut	n	b	k	w	ut	but	kut	wut	hut
+147	1	1	easy	initial	n	4	3	7	104307	nun	n	b	k	w	un	bun	kun	wun	bun
+148	1	1	easy	initial	n	4	3	8	104308	name	n	b	k	w	ame	bame	kame	wame	game
+149	1	1	easy	initial	n	4	3	9	104309	note	n	b	k	w	ote	bote	kote	wote	vote
+150	1	1	easy	initial	n	4	3	10	104310	nine	n	b	k	s	ine	bine	kine	sine	mine
+151	1	1	easy	initial	w	4	4	1	104401	wig	w	n	b	k	ig	nig	big	kig	big
+152	1	1	easy	initial	w	4	4	2	104402	wed	w	n	b	k	ed	ned	bed	ked	red
+153	1	1	easy	initial	w	4	4	3	104403	wet	w	n	b	k	et	net	bet	ket	let
+154	1	1	easy	initial	w	4	4	4	104404	win	w	n	b	k	in	nin	bin	kin	kin
+155	1	1	easy	initial	w	4	4	5	104405	wit	w	n	b	k	it	nit	bit	kit	lit
+156	1	1	easy	initial	w	4	4	6	104406	wave	w	n	b	k	ave	nave	bave	kave	save
+157	1	1	easy	initial	w	4	4	7	104407	wide	w	n	b	k	ide	nide	bide	kide	ride
+158	1	1	easy	initial	w	4	4	8	104408	wife	w	n	b	k	ife	nife	bife	kife	life
+159	1	1	easy	initial	w	4	4	9	104409	wag	w	n	b	k	ag	nag	bag	kag	bag
+160	1	1	easy	initial	w	4	4	10	104410	wipe	w	n	b	k	ipe	nipe	bipe	kipe	pipe
+161	1	1	easy	final	g	5	1	1	105101	fig	g	m	b	t	fi	fim	fib	fit	fit
+162	1	1	easy	final	g	5	1	2	105102	dog	g	m	b	t	do	dom	dob	dot	dot
+163	1	1	easy	final	g	5	1	3	105103	bag	g	m	b	t	ba	bam	bab	bat	bat
+164	1	1	easy	final	g	5	1	4	105104	log	g	m	b	t	lo	lom	lob	lot	lot
+165	1	1	easy	final	g	5	1	5	105105	rag	g	m	b	t	ra	ram	rab	rat	ram
+166	1	1	easy	final	g	5	1	6	105106	tag	g	m	b	t	ta	tam	tab	tat	tab
+167	1	1	easy	final	g	5	1	7	105107	bug	g	l	b	t	bu	bul	bub	but	bun
+168	1	1	easy	final	g	5	1	8	105108	hug	g	m	b	t	hu	hum	hub	hut	hut
+169	1	1	easy	final	g	5	1	9	105109	dig	g	m	b	t	di	dim	dib	dit	did
+170	1	1	easy	final	g	5	1	10	105110	big	g	m	b	t	bi	bim	bib	bit	bin
+171	1	1	easy	final	m	5	2	1	105201	dim	m	g	b	t	di	dig	dib	dit	dig
+172	1	1	easy	final	m	5	2	2	105202	gum	m	g	b	t	gu	gug	gub	gut	gut
+173	1	1	easy	final	m	5	2	3	105203	ham	m	g	b	t	ha	hag	hab	hat	hat
+174	1	1	easy	final	m	5	2	4	105204	him	m	g	b	t	hi	hig	hib	hit	hip
+175	1	1	easy	final	m	5	2	5	105205	hum	m	g	b	t	hu	hug	hub	hut	hug
+176	1	1	easy	final	m	5	2	6	105206	jam	m	g	b	t	ja	jag	jab	jat	jag
+177	1	1	easy	final	m	5	2	7	105207	mom	m	g	b	t	mo	mog	mob	mot	mop
+178	1	1	easy	final	m	5	2	8	105208	ram	m	g	b	t	ra	rag	rab	rat	rat
+179	1	1	easy	final	m	5	2	9	105209	rim	m	g	b	t	ri	rig	rib	rit	rib
+180	1	1	easy	final	m	5	2	10	105210	sum	m	g	b	t	su	sug	sub	sut	sun
+181	1	1	easy	final	b	5	3	1	105301	cab	b	m	g	t	ca	cam	cag	cat	cap
+182	1	1	easy	final	b	5	3	2	105302	bib	b	m	g	t	bi	bim	big	bit	big
+183	1	1	easy	final	b	5	3	3	105303	rib	b	m	g	t	ri	rim	rig	rit	rip
+184	1	1	easy	final	b	5	3	4	105304	job	b	m	g	t	jo	jom	jog	jot	jot
+185	1	1	easy	final	b	5	3	5	105305	lab	b	m	g	t	la	lam	lag	lat	lap
+186	1	1	easy	final	b	5	3	6	105306	gab	b	m	g	t	ga	gam	gag	gat	gas
+187	1	1	easy	final	b	5	3	7	105307	nab	b	m	g	t	na	nam	nag	nat	nap
+188	1	1	easy	final	b	5	3	8	105308	tab	b	m	g	t	ta	tam	tag	tat	tan
+189	1	1	easy	final	b	5	3	9	105309	jab	b	m	g	t	ja	jam	jag	jat	jam
+190	1	1	easy	final	b	5	3	10	105310	web	b	m	g	t	we	wem	weg	wet	wet
+191	1	1	easy	final	t	5	4	1	105401	bat	t	b	m	g	ba	bab	bam	bag	bad
+192	1	1	easy	final	t	5	4	2	105402	met	t	b	m	g	me	meb	mem	meg	men
+193	1	1	easy	final	t	5	4	3	105403	pot	t	b	m	g	po	pob	pom	pog	pop
+194	1	1	easy	final	t	5	4	4	105404	nut	t	b	m	g	nu	nub	num	nug	nun
+195	1	1	easy	final	t	5	4	5	105405	cat	t	b	m	g	ca	cab	cam	cag	cab
+196	1	1	easy	final	t	5	4	6	105406	rat	t	b	m	g	ra	rab	ram	rag	rag
+197	1	1	easy	final	t	5	4	7	105407	not	t	b	m	g	no	nob	nom	nog	nod
+198	1	1	easy	final	t	5	4	8	105408	hat	t	b	m	g	ha	hab	ham	hag	had
+199	1	1	easy	final	t	5	4	9	105409	fit	t	b	m	g	fi	fib	fim	fig	fin
+200	1	1	easy	final	t	5	4	10	105410	sit	t	b	m	g	si	sib	sim	sig	sip
+201	1	1	easy	final	d	6	1	1	106101	wed	d	n	p	g	we	wen	wep	weg	web
+202	1	1	easy	final	d	6	1	2	106102	led	d	n	p	g	le	len	lep	leg	let
+203	1	1	easy	final	d	6	1	3	106103	had	d	n	p	g	ha	han	hap	hag	ham
+204	1	1	easy	final	d	6	1	4	106104	bad	d	n	p	g	ba	ban	bap	bag	ban
+205	1	1	easy	final	d	6	1	5	106105	sad	d	n	p	g	sa	san	sap	sag	sat
+206	1	1	easy	final	d	6	1	6	106106	did	d	n	p	g	di	din	dip	dig	dim
+207	1	1	easy	final	d	6	1	7	106107	kid	d	n	p	g	ki	kin	kip	kig	kit
+208	1	1	easy	final	d	6	1	8	106108	mud	d	n	p	g	mu	mun	mup	mug	mug
+209	1	1	easy	final	d	6	1	9	106109	nod	d	n	p	g	no	non	nop	nog	not
+210	1	1	easy	final	d	6	1	10	106110	bed	d	n	p	g	be	ben	bep	beg	beg
+211	1	1	easy	final	n	6	2	1	106201	can	n	d	p	g	ca	cad	cap	cag	cap
+212	1	1	easy	final	n	6	2	2	106202	man	n	d	p	g	ma	mad	map	mag	map
+213	1	1	easy	final	n	6	2	3	106203	sun	n	d	p	g	su	sud	sup	sug	sum
+214	1	1	easy	final	n	6	2	4	106204	tin	n	d	p	g	ti	tid	tip	tig	tip
+215	1	1	easy	final	n	6	2	5	106205	pen	n	d	p	g	pe	ped	pep	peg	pet
+216	1	1	easy	final	n	6	2	6	106206	fin	n	d	p	g	fi	fid	fip	fig	fit
+217	1	1	easy	final	n	6	2	7	106207	pan	n	d	p	g	pa	pad	pap	pag	pad
+218	1	1	easy	final	n	6	2	8	106208	kin	n	d	p	g	ki	kid	kip	kig	kid
+219	1	1	easy	final	n	6	2	9	106209	run	n	d	p	g	ru	rud	rup	rug	rut
+220	1	1	easy	final	n	6	2	10	106210	nun	n	d	p	g	nu	nud	nup	nug	nut
+221	1	1	easy	final	p	6	3	1	106301	cap	p	n	d	g	ca	can	cad	cag	cat
+222	1	1	easy	final	p	6	3	2	106302	map	p	n	d	g	ma	man	mad	mag	mad
+223	1	1	easy	final	p	6	3	3	106303	mop	p	n	d	g	mo	mon	mod	mog	mom
+224	1	1	easy	final	p	6	3	4	106304	rip	p	n	d	g	ri	rin	rid	rig	rib
+225	1	1	easy	final	p	6	3	5	106305	tip	p	n	d	g	ti	tin	tid	tig	tin
+226	1	1	easy	final	p	6	3	6	106306	lap	p	n	d	g	la	lan	lad	lag	lad
+227	1	1	easy	final	p	6	3	7	106307	hip	p	n	d	g	hi	hin	hid	hig	him
+228	1	1	easy	final	p	6	3	8	106308	lip	p	n	d	g	li	lin	lid	lig	lid
+229	1	1	easy	final	p	6	3	9	106309	cup	p	n	d	g	cu	cun	cud	cug	cut
+230	1	1	easy	final	p	6	3	10	106310	sip	p	n	d	g	si	sin	sid	sig	sit
+231	1	1	easy	final	g	6	4	1	106401	fig	g	p	n	d	fi	fip	fin	fid	fit
+232	1	1	easy	final	g	6	4	2	106402	dog	g	p	n	d	do	dop	don	dod	dot
+233	1	1	easy	final	g	6	4	3	106403	bag	g	p	n	d	ba	bap	ban	bad	bat
+234	1	1	easy	final	g	6	4	4	106404	log	g	p	n	d	lo	lop	lon	lod	lot
+235	1	1	easy	final	g	6	4	5	106405	rag	g	p	n	d	ra	rap	ran	rad	ram
+236	1	1	easy	final	g	6	4	6	106406	tag	g	p	n	d	ta	tap	tan	tad	tab
+237	1	1	easy	final	g	6	4	7	106407	bug	g	p	n	d	bu	bup	bun	bud	bun
+238	1	1	easy	final	g	6	4	8	106408	hug	g	p	n	d	hu	hup	hun	hud	hut
+239	1	1	easy	final	g	6	4	9	106409	dig	g	p	n	d	di	dip	din	did	did
+240	1	1	easy	final	g	6	4	10	106410	big	g	p	n	d	bi	bip	bin	bid	bin
+241	1	1		medial	short-a	7	1	1	107101	ram	a	i	u	e	r_m	rim	rum	rem	rim
+242	1	1		medial	short-a	7	1	2	107102	jab	a	i	u	e	j_b	jib	jub	jeb	job
+243	1	1		medial	short-a	7	1	3	107103	bat	a	i	u	e	b_t	bit	but	bet	bit
+244	1	1		medial	short-a	7	1	4	107104	bag	a	i	u	e	b_g	big	bug	beg	bug
+245	1	1		medial	short-a	7	1	5	107105	hat	a	i	u	e	h_t	hit	hut	het	hit
+246	1	1		medial	short-a	7	1	6	107106	cat	a	i	u	e	c_t	cit	cut	cet	cot
+247	1	1		medial	short-a	7	1	7	107107	cap	a	i	u	e	c_p	cip	cup	cep	cup
+248	1	1		medial	short-a	7	1	8	107108	man	a	i	u	e	m_n	min	mun	men	men
+249	1	1		medial	short-a	7	1	9	107109	map	a	i	u	e	m_p	mip	mup	mep	mop
+250	1	1		medial	short-a	7	1	10	107110	rat	a	i	u	e	r_t	rit	rut	ret	rut
+251	1	1		fourth	long-a	7	2	1	107201	cane	e	i	u	a	can	cani	canu	cana	can
+252	1	1		fourth	long-a	7	2	2	107202	cape	e	i	u	a	cap	capi	capu	capa	cap
+253	1	1		fourth	long-a	7	2	3	107203	fade	e	i	u	a	fad	fadi	fadu	fada	fad
+254	1	1		second	long-a	7	2	4	107204	cane	a	i	u	e	c_ne	cine	cune	cene	cone
+255	1	1		fourth	long-a	7	2	5	107205	made	e	i	u	a	mad	madi	madu	mada	mad
+256	1	1		fourth	long-a	7	2	6	107206	rate	e	i	u	a	rat	rati	ratu	rata	rat
+257	1	1		fourth	long-a	7	2	7	107207	tape	e	i	u	a	tap	tapi	tapu	tapa	tap
+258	1	1		second	long-a	7	2	8	107208	lane	a	i	u	e	l_ne	line	lune	lene	line
+259	1	1		second	long-a	7	2	9	107209	lake	a	i	u	e	l_ke	like	luke	leke	like
+260	1	1		second	long-a	7	2	10	107210	bake	a	i	u	e	b_ke	bike	buke	beke	bike
+261	1	1		medial	short-i	7	3	1	107301	fig	i	u	o	e	f_g	fug	fog	feg	fog
+262	1	1		medial	short-i	7	3	2	107302	pig	i	u	a	e	p_g	pug	pag	peg	peg
+263	1	1		medial	short-i	7	3	3	107303	rib	i	u	a	e	r_b	rub	rab	reb	rub
+264	1	1		medial	short-i	7	3	4	107304	wig	i	u	a	e	w_g	wug	wag	weg	wag
+265	1	1		medial	short-i	7	3	5	107305	fin	i	u	a	e	f_n	fun	fan	fen	fun
+266	1	1		medial	short-i	7	3	6	107306	him	i	u	a	e	h_m	hum	ham	hem	hum
+267	1	1		medial	short-i	7	3	7	107307	did	i	u	a	e	d_d	dud	dad	ded	dad
+268	1	1		medial	short-i	7	3	8	107308	big	i	u	a	e	b_g	bug	bag	beg	bag
+269	1	1		medial	short-i	7	3	9	107309	hit	i	u	a	e	h_t	hut	hat	het	hot
+270	1	1		medial	short-i	7	3	10	107310	fit	i	u	a	e	f_t	fut	fat	fet	fat
+271	1	1		fourth	long-i	7	4	1	107401	fine	e	a	u	i	fin	fina	finu	fini	fin
+272	1	1		fourth	long-i	7	4	2	107402	kite	e	a	u	i	kit	kita	kitu	kiti	kit
+273	1	1		fourth	long-i	7	4	3	107403	pine	e	a	u	i	pin	pina	pinu	pini	pin
+274	1	1		fourth	long-i	7	4	4	107404	ride	e	a	u	i	rid	rida	ridu	ridi	rid
+275	1	1		fourth	long-i	7	4	5	107405	hide	e	a	u	i	hid	hida	hidu	hidi	hid
+276	1	1		fourth	long-i	7	4	6	107406	bite	e	a	u	i	bit	bita	bitu	biti	bit
+277	1	1		fourth	long-i	7	4	7	107407	dime	e	a	u	i	dim	dima	dimu	dimi	dim
+278	1	1		second	long-i	7	4	8	107408	like	i	a	u	e	l_ke	lake	luke	leke	lake
+279	1	1		second	long-i	7	4	9	107409	time	i	a	u	e	t_me	tame	tume	teme	tame
+280	1	1		second	long-i	7	4	10	107410	line	i	a	u	e	l_ne	lane	lune	lene	lane
+281	1	1		medial	FILLER	7	5	1	107501	jug	u	i	a	e	j_g	jig	jag	jeg	jig
+282	1	1		medial	FILLER	7	5	2	107502	nut	u	i	a	e	n_t	nit	nat	net	net
+283	1	1		medial	FILLER	7	5	3	107503	cup	u	i	a	e	c_p	cip	cap	cep	cap
+284	1	1		medial	FILLER	7	5	4	107504	rug	u	i	a	e	r_g	rig	rag	reg	rag
+285	1	1		medial	FILLER	7	5	5	107505	bud	u	i	a	e	b_d	bid	bad	bed	bed
+286	1	1		medial	FILLER	7	5	6	107506	bug	u	i	a	e	b_g	big	bag	beg	bag
+287	1	1		medial	FILLER	7	5	7	107507	but	u	i	a	e	b_t	bit	bat	bet	bit
+288	1	1		medial	FILLER	7	5	8	107508	run	u	i	a	e	r_n	rin	ran	ren	ran
+289	1	1		medial	FILLER	7	5	9	107509	cut	u	i	a	e	c_t	cit	cat	cet	cot
+290	1	1		medial	FILLER	7	5	10	107510	fun	u	i	a	e	f_n	fin	fan	fen	fan
+291	1	1		medial	short-e	8	1	1	108101	jet	e	o	u	i	j_t	jot	jut	jit	jot
+292	1	1		medial	short-e	8	1	2	108102	pen	e	o	u	i	p_n	pon	pun	pin	pan
+293	1	1		medial	short-e	8	1	3	108103	red	e	o	u	i	r_d	rod	rud	rid	rid
+294	1	1		medial	short-e	8	1	4	108104	ten	e	o	u	i	t_n	ton	tun	tin	tin
+295	1	1		medial	short-e	8	1	5	108105	men	e	o	u	i	m_n	mon	mun	min	man
+296	1	1		medial	short-e	8	1	6	108106	get	e	o	u	i	g_t	got	gut	git	got
+297	1	1		medial	short-e	8	1	7	108107	set	e	o	u	i	s_t	sot	sut	sit	sit
+298	1	1		medial	short-e	8	1	8	108108	let	e	o	u	i	l_t	lot	lut	lit	lit
+299	1	1		medial	short-e	8	1	9	108109	bed	e	o	u	i	b_d	bod	bud	bid	bud
+300	1	1		medial	short-e	8	1	10	108110	pet	e	o	u	i	p_t	pot	put	pit	pot
+301	1	1		medial	short-o	8	2	1	108201	log	o	e	u	i	l_g	leg	lug	lig	lug
+302	1	1		medial	short-o	8	2	2	108202	mop	o	e	u	i	m_p	mep	mup	mip	map
+303	1	1		medial	short-o	8	2	3	108203	not	o	e	u	i	n_t	net	nut	nit	net
+304	1	1		medial	short-o	8	2	4	108204	got	o	e	u	i	g_t	get	gut	git	get
+305	1	1		medial	short-o	8	2	5	108205	job	o	e	u	i	j_b	jeb	jub	jib	jab
+306	1	1		medial	short-o	8	2	6	108206	top	o	e	u	i	t_p	tep	tup	tip	tip
+307	1	1		medial	short-o	8	2	7	108207	lot	o	e	u	i	l_t	let	lut	lit	lit
+308	1	1		medial	short-o	8	2	8	108208	hot	o	e	u	i	h_t	het	hut	hit	hut
+309	1	1		medial	short-o	8	2	9	108209	fog	o	e	u	i	f_g	feg	fug	fig	fig
+310	1	1		medial	short-o	8	2	10	108210	mom	o	e	u	i	m_m	mem	mum	mim	mum
+311	1	1		second	long-o	8	3	1	108301	lone	o	e	u	i	l_ne	lene	lune	line	line
+312	1	1		fourth	long-o	8	3	2	108302	rode	e	o	u	i	rod	rodo	rodu	rodi	rod
+313	1	1		fourth	long-o	8	3	3	108303	note	e	o	u	i	not	noto	notu	noti	not
+314	1	1		fourth	long-o	8	3	4	108304	hope	e	o	u	i	hop	hopo	hopu	hopi	hop
+315	1	1		second	long-o	8	3	5	108305	cone	o	e	u	i	c_ne	cene	cune	cine	cane
+316	1	1		second	long-o	8	3	6	108306	lone	o	e	u	i	l_ne	lene	lune	line	lane
+317	1	1		second	long-o	8	3	7	108307	pole	o	e	u	i	p_le	pele	pule	pile	pale
+318	1	1		second	long-o	8	3	8	108308	rope	o	e	u	i	r_pe	repe	rupe	ripe	ripe
+319	1	1		second	long-o	8	3	9	108309	bore	o	e	u	i	b_re	bere	bure	bire	bare
+320	1	1		second	long-o	8	3	10	108310	mole	o	e	u	i	m_le	mele	mule	mile	mile
+321	1	1		medial	short-u	8	4	1	108401	jug	u	o	e	i	j_g	jog	jeg	jig	jag
+322	1	1		medial	short-u	8	4	2	108402	nut	u	o	e	i	n_t	not	net	nit	not
+323	1	1		medial	short-u	8	4	3	108403	cup	u	o	e	i	c_p	cop	cep	cip	cop
+324	1	1		medial	short-u	8	4	4	108404	rug	u	o	e	i	r_g	rog	reg	rig	rig
+325	1	1		medial	short-u	8	4	5	108405	bud	u	o	e	i	b_d	bod	bed	bid	bad
+326	1	1		medial	short-u	8	4	6	108406	bug	u	o	e	i	b_g	bog	beg	big	big
+327	1	1		medial	short-u	8	4	7	108407	but	u	o	e	i	b_t	bot	bet	bit	bat
+328	1	1		medial	short-u	8	4	8	108408	run	u	o	e	i	r_n	ron	ren	rin	ran
+329	1	1		medial	short-u	8	4	9	108409	cut	u	o	e	i	c_t	cot	cet	cit	cat
+330	1	1		medial	short-u	8	4	10	108410	fun	u	o	e	i	f_n	fon	fen	fin	fin
+331	1	1		fourth	FILLER	8	5	1	108501	ripe	e	o	u	i	rip	ripo	ripu	ripi	rip
+332	1	1		fourth	FILLER	8	5	2	108502	site	e	o	u	i	sit	sito	situ	siti	sit
+333	1	1		second	FILLER	8	5	3	108503	ride	i	o	u	e	r_de	rode	rude	rede	rode
+334	1	1		fourth	FILLER	8	5	4	108504	ride	e	o	u	i	rid	rido	ridu	ridi	rid
+335	1	1		fourth	FILLER	8	5	5	108505	hide	e	o	u	i	hid	hido	hidu	hidi	hid
+336	1	1		fourth	FILLER	8	5	6	108506	bite	e	o	u	i	bit	bito	bitu	biti	bit
+337	1	1		fourth	FILLER	8	5	7	108507	dime	e	o	u	i	dim	dimo	dimu	dimi	dim
+338	1	1		second	FILLER	8	5	8	108508	mile	i	o	u	e	m_le	mole	mule	mele	mole
+339	1	1		second	FILLER	8	5	9	108509	bike	i	o	u	e	b_ke	boke	buke	beke	bake
+340	1	1		second	FILLER	8	5	10	108510	ripe	i	o	u	e	r_pe	rope	rupe	repe	rope
+341	3	1	hard	initial	b	9	1	1	309101	bed	b	p	c	t	ed	ped	ced	ted	red
+342	3	1	hard	initial	b	9	1	2	309102	but	b	p	c	t	ut	put	cut	tut	nut
+343	3	1	hard	initial	b	9	1	3	309103	bat	b	p	c	t	at	pat	cat	tat	hat
+344	3	1	hard	initial	b	9	1	4	309104	bug	b	p	c	t	ug	pug	cug	tug	tug
+345	3	1	hard	initial	b	9	1	5	309105	bag	b	p	c	t	ag	pag	cag	tag	wag
+346	3	1	hard	initial	b	9	1	6	309106	bib	b	p	c	t	ib	pib	cib	tib	rib
+347	3	1	hard	initial	b	9	1	7	309107	bad	b	p	c	t	ad	pad	cad	tad	had
+348	3	1	hard	initial	b	9	1	8	309108	big	b	p	c	t	ig	pig	cig	tig	wig
+349	3	1	hard	initial	b	9	1	9	309109	bake	b	p	c	t	ake	pake	cake	take	cake
+350	3	1	hard	initial	b	9	1	10	309110	bone	b	p	c	t	one	pone	cone	tone	cone
+351	3	1	hard	initial	p	9	2	1	309201	pit	p	b	c	d	it	bit	cit	dit	bit
+352	3	1	hard	initial	p	9	2	2	309202	pin	p	b	c	t	in	bin	cin	tin	fin
+353	3	1	hard	initial	p	9	2	3	309203	pen	p	b	c	t	en	ben	cen	ten	hen
+354	3	1	hard	initial	p	9	2	4	309204	pan	p	b	c	t	an	ban	can	tan	man
+355	3	1	hard	initial	p	9	2	5	309205	pat	p	b	c	t	at	bat	cat	tat	bat
+356	3	1	hard	initial	p	9	2	6	309206	pot	p	b	c	t	ot	bot	cot	tot	hot
+357	3	1	hard	initial	p	9	2	7	309207	pet	p	b	c	t	et	bet	cet	tet	let
+358	3	1	hard	initial	p	9	2	8	309208	pop	p	b	c	t	op	bop	cop	top	top
+359	3	1	hard	initial	p	9	2	9	309209	pup	p	b	c	t	up	bup	cup	tup	cup
+360	3	1	hard	initial	p	9	2	10	309210	pipe	p	b	c	t	ipe	bipe	cipe	tipe	ripe
+361	3	1	hard	initial	c	9	3	1	309301	cab	c	p	b	t	ab	pab	bab	tab	tab
+362	3	1	hard	initial	c	9	3	2	309302	can	c	p	b	t	an	pan	ban	tan	man
+363	3	1	hard	initial	c	9	3	3	309303	cat	c	p	b	t	at	pat	bat	tat	bat
+364	3	1	hard	initial	c	9	3	4	309304	cap	c	p	b	t	ap	pap	bap	tap	gap
+365	3	1	hard	initial	c	9	3	5	309305	cop	c	p	b	t	op	pop	bop	top	top
+366	3	1	hard	initial	c	9	3	6	309306	cut	c	p	b	t	ut	put	but	tut	nut
+367	3	1	hard	initial	c	9	3	7	309307	cave	c	p	b	t	ave	pave	bave	tave	save
+368	3	1	hard	initial	c	9	3	8	309308	cone	c	p	b	t	one	pone	bone	tone	bone
+369	3	1	hard	initial	c	9	3	9	309309	cake	c	p	b	t	ake	pake	bake	take	take
+370	3	1	hard	initial	c	9	3	10	309310	came	c	p	b	t	ame	pame	bame	tame	name
+371	3	1	hard	initial	t	9	4	1	309401	tug	t	c	p	b	ug	cug	pug	bug	bug
+372	3	1	hard	initial	t	9	4	2	309402	tag	t	c	p	b	ag	cag	pag	bag	bag
+373	3	1	hard	initial	t	9	4	3	309403	top	t	c	p	b	op	cop	pop	bop	pop
+374	3	1	hard	initial	t	9	4	4	309404	tip	t	c	p	b	ip	cip	pip	bip	zip
+375	3	1	hard	initial	t	9	4	5	309405	tin	t	c	p	b	in	cin	pin	bin	pin
+376	3	1	hard	initial	t	9	4	6	309406	tan	t	c	p	b	an	can	pan	ban	man
+377	3	1	hard	initial	t	9	4	7	309407	ten	t	c	p	b	en	cen	pen	ben	hen
+378	3	1	hard	initial	t	9	4	8	309408	take	t	c	p	b	ake	cake	pake	bake	bake
+379	3	1	hard	initial	t	9	4	9	309409	tape	t	c	p	b	ape	cape	pape	bape	cape
+380	3	1	hard	initial	t	9	4	10	309410	time	t	c	p	b	ime	cime	pime	bime	lime
+381	3	1	hard	initial	d	10	1	1	310101	did	d	g	k	j	id	gid	kid	jid	hid
+382	3	1	hard	initial	d	10	1	2	310102	dad	d	g	k	j	ad	gad	kad	jad	had
+383	3	1	hard	initial	d	10	1	3	310103	dot	d	g	k	j	ot	got	kot	jot	got
+384	3	1	hard	initial	d	10	1	4	310104	dig	d	g	k	j	ig	gig	kig	jig	big
+385	3	1	hard	initial	d	10	1	5	310105	dip	d	g	k	j	ip	gip	kip	jip	rip
+386	3	1	hard	initial	d	10	1	6	310106	den	d	g	k	j	en	gen	ken	jen	men
+387	3	1	hard	initial	d	10	1	7	310107	dim	d	g	k	j	im	gim	kim	jim	him
+388	3	1	hard	initial	d	10	1	8	310108	dime	d	g	k	j	ime	gime	kime	jime	time
+389	3	1	hard	initial	d	10	1	9	310109	date	d	g	k	j	ate	gate	kate	jate	rate
+390	3	1	hard	initial	d	10	1	10	310110	dude	d	g	k	j	ude	gude	kude	jude	rude
+391	3	1	hard	initial	g	10	2	1	310201	got	g	k	j	d	ot	kot	jot	dot	hot
+392	3	1	hard	initial	g	10	2	2	310202	gum	g	k	j	p	um	kum	jum	pum	hum
+393	3	1	hard	initial	g	10	2	3	310203	gag	g	k	j	d	ag	kag	jag	dag	sag
+394	3	1	hard	initial	g	10	2	4	310204	gab	g	k	j	d	ab	kab	jab	dab	tab
+395	3	1	hard	initial	g	10	2	5	310205	gut	g	k	j	d	ut	kut	jut	dut	but
+396	3	1	hard	initial	g	10	2	6	310206	gap	g	k	c	d	ap	kap	cap	dap	nap
+397	3	1	hard	initial	g	10	2	7	310207	get	g	k	j	d	et	ket	jet	det	met
+398	3	1	hard	initial	g	10	2	8	310208	gate	g	k	j	d	ate	kate	jate	date	late
+399	3	1	hard	initial	g	10	2	9	310209	game	g	k	j	d	ame	kame	jame	dame	same
+400	3	1	hard	initial	g	10	2	10	310210	gave	g	k	j	d	ave	kave	jave	dave	save
+401	3	1	hard	initial	k	10	3	1	310301	keg	k	g	j	d	eg	geg	jeg	deg	beg
+402	3	1	hard	initial	k	10	3	2	310302	kid	k	g	j	d	id	gid	jid	did	bid
+403	3	1	hard	initial	k	10	3	3	310303	kin	k	g	j	d	in	gin	jin	din	win
+404	3	1	hard	initial	k	10	3	4	310304	kit	k	g	j	d	it	git	jit	dit	bit
+405	3	1	hard	initial	k	10	3	5	310305	kale	k	g	j	d	ale	gale	jale	dale	sale
+406	3	1	hard	initial	k	10	3	6	310306	kite	k	g	j	d	ite	gite	jite	dite	site
+407	3	1	hard	initial	k	10	3	7	310307	keg	k	g	j	d	eg	geg	jeg	deg	leg
+408	3	1	hard	initial	k	10	3	8	310308	kid	k	g	j	d	id	gid	jid	did	hid
+409	3	1	hard	initial	k	10	3	9	310309	kite	k	g	j	d	ite	gite	jite	dite	bite
+410	3	1	hard	initial	k	10	3	10	310310	kit	k	g	j	d	it	git	jit	dit	wit
+411	3	1	hard	initial	j	10	4	1	310401	jog	j	k	g	d	og	kog	gog	dog	dog
+412	3	1	hard	initial	j	10	4	2	310402	jig	j	k	g	d	ig	kig	gig	dig	dig
+413	3	1	hard	initial	j	10	4	3	310403	jag	j	k	g	d	ag	kag	gag	dag	rag
+414	3	1	hard	initial	j	10	4	4	310404	jam	j	k	g	t	am	kam	gam	tam	ram
+415	3	1	hard	initial	j	10	4	5	310405	jab	j	k	g	d	ab	kab	gab	dab	lab
+416	3	1	hard	initial	j	10	4	6	310406	jug	j	k	g	d	ug	kug	gug	dug	tug
+417	3	1	hard	initial	j	10	4	7	310407	jot	j	k	g	d	ot	kot	got	dot	hot
+418	3	1	hard	initial	j	10	4	8	310408	jet	j	k	g	d	et	ket	get	det	set
+419	3	1	hard	initial	j	10	4	9	310409	joke	j	k	g	d	oke	koke	goke	doke	poke
+420	3	1	hard	initial	j	10	4	10	310410	jug	j	k	g	d	ug	kug	gug	dug	hug
+421	3	1	hard	initial	f	11	1	1	311101	fit	f	h	s	w	it	hit	sit	wit	bit
+422	3	1	hard	initial	f	11	1	2	311102	fed	f	h	s	w	ed	hed	sed	wed	led
+423	3	1	hard	initial	f	11	1	3	311103	fan	f	h	s	w	an	han	san	wan	can
+424	3	1	hard	initial	f	11	1	4	311104	fig	f	h	s	w	ig	hig	sig	wig	dig
+425	3	1	hard	initial	f	11	1	5	311105	fat	f	h	s	w	at	hat	sat	wat	bat
+426	3	1	hard	initial	f	11	1	6	311106	fog	f	h	s	w	og	hog	sog	wog	dog
+427	3	1	hard	initial	f	11	1	7	311107	fin	f	h	s	w	in	hin	sin	win	win
+428	3	1	hard	initial	f	11	1	8	311108	fun	f	h	s	w	un	hun	sun	wun	sun
+429	3	1	hard	initial	f	11	1	9	311109	fad	f	h	s	w	ad	had	sad	wad	mad
+430	3	1	hard	initial	f	11	1	10	311110	fade	f	h	s	w	ade	hade	sade	wade	made
+431	3	1	hard	initial	h	11	2	1	311201	hot	h	f	s	w	ot	fot	sot	wot	not
+432	3	1	hard	initial	h	11	2	2	311202	hit	h	f	s	w	it	fit	sit	wit	kit
+433	3	1	hard	initial	h	11	2	3	311203	him	h	f	s	w	im	fim	sim	wim	dim
+434	3	1	hard	initial	h	11	2	4	311204	ham	h	f	s	w	am	fam	sam	wam	jam
+435	3	1	hard	initial	h	11	2	5	311205	had	h	f	s	w	ad	fad	sad	wad	fad
+436	3	1	hard	initial	h	11	2	6	311206	hen	h	f	s	w	en	fen	sen	wen	men
+437	3	1	hard	initial	h	11	2	7	311207	hug	h	f	s	w	ug	fug	sug	wug	jug
+438	3	1	hard	initial	h	11	2	8	311208	hat	h	f	s	w	at	fat	sat	wat	sat
+439	3	1	hard	initial	h	11	2	9	311209	hope	h	f	s	w	ope	fope	sope	wope	rope
+440	3	1	hard	initial	h	11	2	10	311210	hide	h	f	s	w	ide	fide	side	wide	side
+441	3	1	hard	initial	s	11	3	1	311301	sag	s	h	z	w	ag	hag	zag	wag	tag
+442	3	1	hard	initial	s	11	3	2	311302	set	s	h	f	w	et	het	fet	wet	get
+443	3	1	hard	initial	s	11	3	3	311303	sit	s	h	f	w	it	hit	fit	wit	pit
+444	3	1	hard	initial	s	11	3	4	311304	sip	s	h	f	w	ip	hip	fip	wip	tip
+445	3	1	hard	initial	s	11	3	5	311305	sap	s	h	f	w	ap	hap	fap	wap	map
+446	3	1	hard	initial	s	11	3	6	311306	sad	s	h	f	w	ad	had	fad	wad	bad
+447	3	1	hard	initial	s	11	3	7	311307	sat	s	h	f	w	at	hat	fat	wat	hat
+448	3	1	hard	initial	s	11	3	8	311308	sum	s	h	f	w	um	hum	fum	wum	gum
+449	3	1	hard	initial	s	11	3	9	311309	same	s	h	f	w	ame	hame	fame	wame	tame
+450	3	1	hard	initial	s	11	3	10	311310	side	s	h	f	w	ide	hide	fide	wide	tide
+451	3	1	hard	initial	w	11	4	1	311401	wig	w	h	f	s	ig	hig	fig	sig	big
+452	3	1	hard	initial	w	11	4	2	311402	wed	w	h	f	s	ed	hed	fed	sed	red
+453	3	1	hard	initial	w	11	4	3	311403	wet	w	h	f	s	et	het	fet	set	let
+454	3	1	hard	initial	w	11	4	4	311404	win	w	h	f	s	in	hin	fin	sin	kin
+455	3	1	hard	initial	w	11	4	5	311405	wit	w	h	f	s	it	hit	fit	sit	lit
+456	3	1	hard	initial	w	11	4	6	311406	wave	w	h	f	s	ave	have	fave	save	save
+457	3	1	hard	initial	w	11	4	7	311407	wide	w	h	f	s	ide	hide	fide	side	ride
+458	3	1	hard	initial	w	11	4	8	311408	wife	w	h	f	s	ife	hife	fife	sife	life
+459	3	1	hard	initial	w	11	4	9	311409	wag	w	h	l	s	ag	hag	lag	sag	rag
+460	3	1	hard	initial	w	11	4	10	311410	wipe	w	h	f	s	ipe	hipe	fipe	sipe	pipe
+461	3	1	hard	initial	m	12	1	1	312101	mug	m	n	l	r	ug	nug	lug	rug	tug
+462	3	1	hard	initial	m	12	1	2	312102	man	m	n	l	r	an	nan	lan	ran	can
+463	3	1	hard	initial	m	12	1	3	312103	men	m	n	l	r	en	nen	len	ren	pen
+464	3	1	hard	initial	m	12	1	4	312104	met	m	n	l	r	et	net	let	ret	set
+465	3	1	hard	initial	m	12	1	5	312105	mat	m	n	l	r	at	nat	lat	rat	sat
+466	3	1	hard	initial	m	12	1	6	312106	map	m	n	l	r	ap	nap	lap	rap	tap
+467	3	1	hard	initial	m	12	1	7	312107	mad	m	n	l	r	ad	nad	lad	rad	sad
+468	3	1	hard	initial	m	12	1	8	312108	mud	m	n	l	r	ud	nud	lud	rud	bud
+469	3	1	hard	initial	m	12	1	9	312109	make	m	n	l	r	ake	nake	lake	rake	take
+470	3	1	hard	initial	m	12	1	10	312110	mine	m	n	l	r	ine	nine	line	rine	fine
+471	3	1	hard	initial	n	12	2	1	312201	not	n	m	l	r	ot	mot	lot	rot	hot
+472	3	1	hard	initial	n	12	2	2	312202	nod	n	m	l	r	od	mod	lod	rod	pod
+473	3	1	hard	initial	n	12	2	3	312203	nab	n	m	l	r	ab	mab	lab	rab	lab
+474	3	1	hard	initial	n	12	2	4	312204	nag	n	m	l	r	ag	mag	lag	rag	wag
+475	3	1	hard	initial	n	12	2	5	312205	nap	n	m	l	r	ap	map	lap	rap	map
+476	3	1	hard	initial	n	12	2	6	312206	net	n	m	l	r	et	met	let	ret	set
+477	3	1	hard	initial	n	12	2	7	312207	nun	n	m	l	r	un	mun	lun	run	bun
+478	3	1	hard	initial	n	12	2	8	312208	name	n	m	l	r	ame	mame	lame	rame	game
+479	3	1	hard	initial	n	12	2	9	312209	note	n	m	l	r	ote	mote	lote	rote	vote
+480	3	1	hard	initial	n	12	2	10	312210	nine	n	m	l	r	ine	mine	line	rine	mine
+481	3	1	hard	initial	l	12	3	1	312301	lot	l	r	m	n	ot	rot	mot	not	dot
+482	3	1	hard	initial	l	12	3	2	312302	let	l	r	m	n	et	ret	met	net	net
+483	3	1	hard	initial	l	12	3	3	312303	lit	l	r	m	n	it	rit	mit	nit	bit
+484	3	1	hard	initial	l	12	3	4	312304	lap	l	r	m	n	ap	rap	map	nap	tap
+485	3	1	hard	initial	l	12	3	5	312305	lip	l	r	m	w	ip	rip	mip	wip	hip
+486	3	1	hard	initial	l	12	3	6	312306	led	l	r	m	n	ed	red	med	ned	fed
+487	3	1	hard	initial	l	12	3	7	312307	live	l	r	m	n	ive	rive	mive	nive	dive
+488	3	1	hard	initial	l	12	3	8	312308	like	l	r	m	n	ike	rike	mike	nike	bike
+489	3	1	hard	initial	l	12	3	9	312309	late	l	r	m	n	ate	rate	mate	nate	gate
+490	3	1	hard	initial	l	12	3	10	312310	log	l	r	m	n	og	rog	mog	nog	fog
+491	3	1	hard	initial	r	12	4	1	312401	red	r	l	m	n	ed	led	med	ned	bed
+492	3	1	hard	initial	r	12	4	2	312402	rip	r	l	m	w	ip	lip	mip	wip	tip
+493	3	1	hard	initial	r	12	4	3	312403	rag	r	l	m	n	ag	lag	mag	nag	tag
+494	3	1	hard	initial	r	12	4	4	312404	run	r	l	m	n	un	lun	mun	nun	fun
+495	3	1	hard	initial	r	12	4	5	312405	ran	r	l	m	n	an	lan	man	nan	man
+496	3	1	hard	initial	r	12	4	6	312406	rat	r	l	m	n	at	lat	mat	nat	cat
+497	3	1	hard	initial	r	12	4	7	312407	rot	r	l	m	n	ot	lot	mot	not	lot
+498	3	1	hard	initial	r	12	4	8	312408	rim	r	l	m	n	im	lim	mim	nim	dim
+499	3	1	hard	initial	r	12	4	9	312409	rake	r	l	m	n	ake	lake	make	nake	lake
+500	3	1	hard	initial	r	12	4	10	312410	rope	r	l	m	n	ope	lope	mope	nope	hope
+501	3	1	hard	final	d	13	1	1	313101	wed	d	m	p	t	we	wem	wep	wet	web
+502	3	1	hard	final	d	13	1	2	313102	led	d	m	p	t	le	lem	lep	let	let
+503	3	1	hard	final	d	13	1	3	313103	had	d	m	p	t	ha	ham	hap	hat	ham
+504	3	1	hard	final	d	13	1	4	313104	bad	d	m	p	t	ba	bam	bap	bat	ban
+505	3	1	hard	final	d	13	1	5	313105	sad	d	m	p	t	sa	sam	sap	sat	sat
+506	3	1	hard	final	d	13	1	6	313106	did	d	m	p	t	di	dim	dip	dit	dim
+507	3	1	hard	final	d	13	1	7	313107	kid	d	m	p	t	ki	kim	kip	kit	kit
+508	3	1	hard	final	d	13	1	8	313108	mud	d	m	p	t	mu	mum	mup	mut	mug
+509	3	1	hard	final	d	13	1	9	313109	nod	d	m	p	t	no	nom	nop	not	not
+510	3	1	hard	final	d	13	1	10	313110	bed	d	m	p	t	be	bem	bep	bet	beg
+511	3	1	hard	final	m	13	2	1	313201	dim	m	d	p	t	di	did	dip	dit	dip
+512	3	1	hard	final	m	13	2	2	313202	gum	m	d	p	t	gu	gud	gup	gut	gut
+513	3	1	hard	final	m	13	2	3	313203	ham	m	d	p	t	ha	had	hap	hat	had
+514	3	1	hard	final	m	13	2	4	313204	him	m	d	p	t	hi	hid	hip	hit	hit
+515	3	1	hard	final	m	13	2	5	313205	hum	m	d	p	t	hu	hud	hup	hut	hut
+516	3	1	hard	final	m	13	2	6	313206	jam	m	d	n	t	ja	jad	jan	jat	jab
+517	3	1	hard	final	m	13	2	7	313207	mom	m	d	p	t	mo	mod	mop	mot	mop
+518	3	1	hard	final	m	13	2	8	313208	ram	m	d	p	t	ra	rad	rap	rat	ran
+519	3	1	hard	final	m	13	2	9	313209	rim	m	d	p	t	ri	rid	rip	rit	rip
+520	3	1	hard	final	m	13	2	10	313210	sum	m	d	p	t	su	sud	sup	sut	sub
+521	3	1	hard	final	p	13	3	1	313301	cap	p	m	d	t	ca	cam	cad	cat	cat
+522	3	1	hard	final	p	13	3	2	313302	map	p	m	d	t	ma	mam	mad	mat	mad
+523	3	1	hard	final	p	13	3	3	313303	mop	p	m	d	t	mo	mom	mod	mot	mom
+524	3	1	hard	final	p	13	3	4	313304	rip	p	m	d	t	ri	rim	rid	rit	rib
+525	3	1	hard	final	p	13	3	5	313305	tip	p	m	d	b	ti	tim	tid	tib	tin
+526	3	1	hard	final	p	13	3	6	313306	lap	p	m	d	t	la	lam	lad	lat	lad
+527	3	1	hard	final	p	13	3	7	313307	hip	p	m	d	t	hi	him	hid	hit	hid
+528	3	1	hard	final	p	13	3	8	313308	lip	p	m	d	t	li	lim	lid	lit	lid
+529	3	1	hard	final	p	13	3	9	313309	cup	p	b	d	t	cu	cub	cud	cut	cut
+530	3	1	hard	final	p	13	3	10	313310	sip	p	m	d	t	si	sim	sid	sit	sit
+531	3	1	hard	final	t	13	4	1	313401	bat	t	p	m	d	ba	bap	bam	bad	bad
+532	3	1	hard	final	t	13	4	2	313402	met	t	p	m	d	me	mep	mem	med	men
+533	3	1	hard	final	t	13	4	3	313403	pot	t	p	m	d	po	pop	pom	pod	pop
+534	3	1	hard	final	t	13	4	4	313404	nut	t	p	m	d	nu	nup	num	nud	nun
+535	3	1	hard	final	t	13	4	5	313405	cat	t	p	m	d	ca	cap	cam	cad	cab
+536	3	1	hard	final	t	13	4	6	313406	rat	t	p	m	d	ra	rap	ram	rad	rag
+537	3	1	hard	final	t	13	4	7	313407	not	t	p	m	d	no	nop	nom	nod	nod
+538	3	1	hard	final	t	13	4	8	313408	hat	t	p	m	d	ha	hap	ham	had	had
+539	3	1	hard	final	t	13	4	9	313409	fit	t	p	m	d	fi	fip	fim	fid	fin
+540	3	1	hard	final	t	13	4	10	313410	sit	t	p	m	d	si	sip	sim	sid	sip
+541	3	1	hard	final	m	14	1	1	314101	dim	m	n	g	b	di	din	dig	dib	dig
+542	3	1	hard	final	m	14	1	2	314102	gum	m	l	g	b	gu	gul	gug	gub	gut
+543	3	1	hard	final	m	14	1	3	314103	ham	m	n	g	b	ha	han	hag	hab	hat
+544	3	1	hard	final	m	14	1	4	314104	him	m	n	g	b	hi	hin	hig	hib	hip
+545	3	1	hard	final	m	14	1	5	314105	hum	m	n	g	b	hu	hun	hug	hub	hug
+546	3	1	hard	final	m	14	1	6	314106	jam	m	n	g	b	ja	jan	jag	jab	jag
+547	3	1	hard	final	m	14	1	7	314107	mom	m	n	g	b	mo	mon	mog	mob	mop
+548	3	1	hard	final	m	14	1	8	314108	ram	m	n	g	b	ra	ran	rag	rab	rat
+549	3	1	hard	final	m	14	1	9	314109	rim	m	n	g	b	ri	rin	rig	rib	rib
+550	3	1	hard	final	m	14	1	10	314110	sum	m	n	g	b	su	sun	sug	sub	sun
+551	3	1	hard	final	n	14	2	1	314201	can	n	m	g	b	ca	cam	cag	cab	cap
+552	3	1	hard	final	n	14	2	2	314202	man	n	m	g	b	ma	mam	mag	mab	map
+553	3	1	hard	final	n	14	2	3	314203	sun	n	m	g	b	su	sum	sug	sub	sum
+554	3	1	hard	final	n	14	2	4	314204	tin	n	m	g	b	ti	tim	tig	tib	tip
+555	3	1	hard	final	n	14	2	5	314205	pen	n	m	g	b	pe	pem	peg	peb	pet
+556	3	1	hard	final	n	14	2	6	314206	fin	n	m	g	b	fi	fim	fig	fib	fit
+557	3	1	hard	final	n	14	2	7	314207	pan	n	m	g	b	pa	pam	pag	pab	pad
+558	3	1	hard	final	n	14	2	8	314208	men	n	m	g	b	me	mem	meg	meb	met
+559	3	1	hard	final	n	14	2	9	314209	run	n	m	g	b	ru	rum	rug	rub	rut
+560	3	1	hard	final	n	14	2	10	314210	nun	n	m	g	b	nu	num	nug	nub	nut
+561	3	1	hard	final	b	14	3	1	314301	cab	b	g	n	m	ca	cag	can	cam	cap
+562	3	1	hard	final	b	14	3	2	314302	bib	b	g	n	m	bi	big	bin	bim	big
+563	3	1	hard	final	b	14	3	3	314303	rib	b	g	n	m	ri	rig	rin	rim	rip
+564	3	1	hard	final	b	14	3	4	314304	job	b	g	n	m	jo	jog	jon	jom	jot
+565	3	1	hard	final	b	14	3	5	314305	lab	b	g	n	m	la	lag	lan	lam	lap
+566	3	1	hard	final	b	14	3	6	314306	gab	b	g	n	m	ga	gag	gan	gam	gas
+567	3	1	hard	final	b	14	3	7	314307	nab	b	g	n	m	na	nag	nan	nam	nap
+568	3	1	hard	final	b	14	3	8	314308	tab	b	g	n	m	ta	tag	tan	tam	tan
+569	3	1	hard	final	b	14	3	9	314309	jab	b	g	n	m	ja	jag	jan	jam	jam
+570	3	1	hard	final	b	14	3	10	314310	web	b	g	n	m	we	weg	wen	wem	wet
+571	3	1	hard	final	g	14	4	1	314401	fig	g	b	n	m	fi	fib	fin	fim	fit
+572	3	1	hard	final	g	14	4	2	314402	dog	g	b	n	m	do	dob	don	dom	dot
+573	3	1	hard	final	g	14	4	3	314403	bag	g	b	n	m	ba	bab	ban	bam	bat
+574	3	1	hard	final	g	14	4	4	314404	log	g	b	n	m	lo	lob	lon	lom	lot
+575	3	1	hard	final	g	14	4	5	314405	rag	g	b	n	m	ra	rab	ran	ram	ram
+576	3	1	hard	final	g	14	4	6	314406	tag	g	b	n	m	ta	tab	tan	tam	tab
+577	3	1	hard	final	g	14	4	7	314407	bug	g	b	n	k	bu	bub	bun	buk	bun
+578	3	1	hard	final	g	14	4	8	314408	hug	g	b	n	m	hu	hub	hun	hum	hut
+579	3	1	hard	final	g	14	4	9	314409	dig	g	b	n	m	di	dib	din	dim	did
+580	3	1	hard	final	g	14	4	10	314410	big	g	b	n	m	bi	bib	bin	bim	bin
+581	3	1		medial	short-a	15	1	1	315101	ram	a	o	i	e	r_m	rom	rim	rem	rim
+582	3	1		medial	short-a	15	1	2	315102	jab	a	o	i	e	j_b	job	jib	jeb	job
+583	3	1		medial	short-a	15	1	3	315103	bat	a	o	i	e	b_t	bot	bit	bet	bit
+584	3	1		medial	short-a	15	1	4	315104	bag	a	o	i	e	b_g	bog	big	beg	bug
+585	3	1		medial	short-a	15	1	5	315105	hat	a	o	i	e	h_t	hot	hit	het	hit
+586	3	1		medial	short-a	15	1	6	315106	cat	a	o	i	e	c_t	cot	cit	cet	cot
+587	3	1		medial	short-a	15	1	7	315107	cap	a	o	i	e	c_p	cop	cip	cep	cup
+588	3	1		medial	short-a	15	1	8	315108	man	a	o	i	e	m_n	mon	min	men	men
+589	3	1		medial	short-a	15	1	9	315109	map	a	o	i	e	m_p	mop	mip	mep	mop
+590	3	1		medial	short-a	15	1	10	315110	rat	a	o	i	e	r_t	rot	rit	ret	rut
+591	3	1		medial	short-o	15	2	1	315201	log	o	i	e	a	l_g	lig	leg	lag	lug
+592	3	1		medial	short-o	15	2	2	315202	mop	o	i	e	a	m_p	mip	mep	map	map
+593	3	1		medial	short-o	15	2	3	315203	not	o	i	e	a	n_t	nit	net	nat	net
+594	3	1		medial	short-o	15	2	4	315204	got	o	i	e	a	g_t	git	get	gat	get
+595	3	1		medial	short-o	15	2	5	315205	job	o	i	e	a	j_b	jib	jeb	jab	jab
+596	3	1		medial	short-o	15	2	6	315206	top	o	i	e	a	t_p	tip	tep	tap	tip
+597	3	1		medial	short-o	15	2	7	315207	lot	o	i	e	a	l_t	lit	let	lat	lit
+598	3	1		medial	short-o	15	2	8	315208	hot	o	i	e	a	h_t	hit	het	hat	hut
+599	3	1		medial	short-o	15	2	9	315209	fog	o	i	e	u	f_g	fig	feg	fug	fig
+600	3	1		medial	short-o	15	2	10	315210	mom	o	i	e	a	m_m	mim	mem	mam	mum
+601	3	1		medial	short-i	15	3	1	315301	fig	i	e	u	o	f_g	feg	fug	fog	fog
+602	3	1		medial	short-i	15	3	2	315302	pig	i	e	a	o	p_g	peg	pag	pog	peg
+603	3	1		medial	short-i	15	3	3	315303	rib	i	e	a	u	r_b	reb	rab	rub	rub
+604	3	1		medial	short-i	15	3	4	315304	wig	i	e	a	o	w_g	weg	wag	wog	wag
+605	3	1		medial	short-i	15	3	5	315305	fin	i	e	a	o	f_n	fen	fan	fon	fun
+606	3	1		medial	short-i	15	3	6	315306	him	i	e	a	o	h_m	hem	ham	hom	hum
+607	3	1		medial	short-i	15	3	7	315307	did	i	e	a	o	d_d	ded	dad	dod	dad
+608	3	1		medial	short-i	15	3	8	315308	big	i	e	a	o	b_g	beg	bag	bog	bag
+609	3	1		medial	short-i	15	3	9	315309	hit	i	e	a	o	h_t	het	hat	hot	hot
+610	3	1		medial	short-i	15	3	10	315310	fit	i	e	a	o	f_t	fet	fat	fot	fat
+611	3	1		fourth	long-i	15	4	1	315401	fine	e	a	o	i	fin	fina	fino	fini	fin
+612	3	1		fourth	long-i	15	4	2	315402	kite	e	a	o	i	kit	kita	kito	kiti	kit
+613	3	1		fourth	long-i	15	4	3	315403	pine	e	a	o	i	pin	pina	pino	pini	pin
+614	3	1		fourth	long-i	15	4	4	315404	ride	e	a	o	i	rid	rida	rido	ridi	rid
+615	3	1		fourth	long-i	15	4	5	315405	hide	e	a	o	i	hid	hida	hido	hidi	hid
+616	3	1		fourth	long-i	15	4	6	315406	bite	e	a	o	i	bit	bita	bito	biti	bit
+617	3	1		fourth	long-i	15	4	7	315407	dime	e	a	o	i	dim	dima	dimo	dimi	dim
+618	3	1		second	long-i	15	4	8	315408	like	i	e	a	o	l_ke	leke	lake	loke	lake
+619	3	1		second	long-i	15	4	9	315409	time	i	e	a	o	t_me	teme	tame	tome	tame
+620	3	1		second	long-i	15	4	10	315410	line	i	e	a	o	l_ne	lene	lane	lone	lane
+621	3	1		medial	FILLER	15	5	1	315501	jet	e	a	o	i	j_t	jat	jot	jit	jot
+622	3	1		medial	FILLER	15	5	2	315502	pen	e	a	o	i	p_n	pan	pon	pin	pan
+623	3	1		medial	FILLER	15	5	3	315503	red	e	a	o	i	r_d	rad	rod	rid	rid
+624	3	1		medial	FILLER	15	5	4	315504	ten	e	a	o	i	t_n	tan	ton	tin	tin
+625	3	1		medial	FILLER	15	5	5	315505	men	e	a	o	i	m_n	man	mon	min	man
+626	3	1		medial	FILLER	15	5	6	315506	get	e	a	o	i	g_t	gat	got	git	got
+627	3	1		medial	FILLER	15	5	7	315507	set	e	a	o	i	s_t	sat	sot	sit	sit
+628	3	1		medial	FILLER	15	5	8	315508	let	e	a	o	i	l_t	lat	lot	lit	lit
+629	3	1		medial	FILLER	15	5	9	315509	bed	e	a	o	i	b_d	bad	bod	bid	bud
+630	3	1		medial	FILLER	15	5	10	315510	pet	e	a	o	i	p_t	pat	pot	pit	pot
+631	3	1		fourth	long-a	16	1	1	316101	cane	e	u	o	a	can	canu	cano	cana	can
+632	3	1		fourth	long-a	16	1	2	316102	cape	e	u	o	a	cap	capu	capo	capa	cap
+633	3	1		fourth	long-a	16	1	3	316103	fade	e	u	o	a	fad	fadu	fado	fada	fad
+634	3	1		second	long-a	16	1	4	316104	cane	a	u	o	e	c_ne	cune	cone	cene	cone
+635	3	1		fourth	long-a	16	1	5	316105	made	e	u	o	a	mad	madu	mado	mada	mad
+636	3	1		fourth	long-a	16	1	6	316106	rate	e	u	o	a	rat	ratu	rato	rata	rat
+637	3	1		fourth	long-a	16	1	7	316107	tape	e	u	o	a	tap	tapu	tapo	tapa	tap
+638	3	1		second	long-a	16	1	8	316108	lane	a	e	u	o	l_ne	lene	lune	lone	line
+639	3	1		second	long-a	16	1	9	316109	lake	a	e	u	o	l_ke	leke	luke	loke	like
+640	3	1		second	long-a	16	1	10	316110	bake	a	e	u	o	b_ke	beke	buke	boke	bike
+641	3	1		medial	short-e	16	2	1	316201	jet	e	u	o	a	j_t	jut	jot	jat	jot
+642	3	1		medial	short-e	16	2	2	316202	pen	e	u	o	a	p_n	pun	pon	pan	pan
+643	3	1		medial	short-e	16	2	3	316203	red	e	u	o	a	r_d	rud	rod	rad	rid
+644	3	1		medial	short-e	16	2	4	316204	ten	e	u	o	a	t_n	tun	ton	tan	tin
+645	3	1		medial	short-e	16	2	5	316205	men	e	u	o	a	m_n	mun	mon	man	man
+646	3	1		medial	short-e	16	2	6	316206	get	e	u	o	a	g_t	gut	got	gat	got
+647	3	1		medial	short-e	16	2	7	316207	set	e	u	o	a	s_t	sut	sot	sat	sit
+648	3	1		medial	short-e	16	2	8	316208	let	e	u	o	a	l_t	lut	lot	lat	lit
+649	3	1		medial	short-e	16	2	9	316209	bed	e	u	o	a	b_d	bud	bod	bad	bud
+650	3	1		medial	short-e	16	2	10	316210	pet	e	u	o	a	p_t	put	pot	pat	pot
+651	3	1		medial	short-u	16	3	1	316301	jug	u	e	a	o	j_g	jeg	jag	jog	jag
+652	3	1		medial	short-u	16	3	2	316302	nut	u	e	a	o	n_t	net	nat	not	not
+653	3	1		medial	short-u	16	3	3	316303	cup	u	e	a	o	c_p	cep	cap	cop	cop
+654	3	1		medial	short-u	16	3	4	316304	rug	u	e	a	o	r_g	reg	rag	rog	rig
+655	3	1		medial	short-u	16	3	5	316305	bud	u	e	a	o	b_d	bed	bad	bod	bad
+656	3	1		medial	short-u	16	3	6	316306	bug	u	e	a	o	b_g	beg	bag	bog	big
+657	3	1		medial	short-u	16	3	7	316307	but	u	e	a	o	b_t	bet	bat	bot	bat
+658	3	1		medial	short-u	16	3	8	316308	run	u	e	a	o	r_n	ren	ran	ron	ran
+659	3	1		medial	short-u	16	3	9	316309	cut	u	e	a	o	c_t	cet	cat	cot	cat
+660	3	1		medial	short-u	16	3	10	316310	fun	u	e	a	o	f_n	fen	fan	fon	fin
+661	3	1		second	long-o	16	4	1	316401	rode	o	u	e	a	r_de	rude	rede	rade	ride
+662	3	1		fourth	long-o	16	4	2	316402	rode	e	u	o	a	rod	rodu	rodo	roda	rod
+663	3	1		fourth	long-o	16	4	3	316403	note	e	u	o	a	not	notu	noto	nota	not
+664	3	1		fourth	long-o	16	4	4	316404	hope	e	u	o	a	hop	hopu	hopo	hopa	hop
+665	3	1		second	long-o	16	4	5	316405	cone	o	a	e	u	c_ne	cane	cene	cune	cane
+666	3	1		second	long-o	16	4	6	316406	lone	o	a	e	u	l_ne	lane	lene	lune	lane
+667	3	1		second	long-o	16	4	7	316407	pole	o	a	e	u	p_le	pale	pele	pule	pale
+668	3	1		second	long-o	16	4	8	316408	rope	o	a	e	u	r_pe	rape	repe	rupe	ripe
+669	3	1		second	long-o	16	4	9	316409	bore	o	a	e	u	b_re	bare	bere	bure	bare
+670	3	1		second	long-o	16	4	10	316410	mole	o	a	e	u	m_le	male	mele	mule	mile
+671	3	1		medial	FILLER	16	5	1	316501	log	o	a	e	u	l_g	lag	leg	lug	leg
+672	3	1		medial	FILLER	16	5	2	316502	mop	o	a	e	u	m_p	map	mep	mup	map
+673	3	1		medial	FILLER	16	5	3	316503	not	o	a	e	u	n_t	nat	net	nut	nut
+674	3	1		medial	FILLER	16	5	4	316504	got	o	a	e	u	g_t	gat	get	gut	gut
+675	3	1		medial	FILLER	16	5	5	316505	job	o	a	e	u	j_b	jab	jeb	jub	jab
+676	3	1		medial	FILLER	16	5	6	316506	top	o	a	e	u	t_p	tap	tep	tup	tap
+677	3	1		medial	FILLER	16	5	7	316507	lot	o	a	e	u	l_t	lat	let	lut	let
+678	3	1		medial	FILLER	16	5	8	316508	hot	o	a	e	u	h_t	hat	het	hut	hit
+679	3	1		medial	FILLER	16	5	9	316509	fog	o	i	e	u	f_g	fig	feg	fug	fig
+680	3	1		medial	FILLER	16	5	10	316510	mom	o	a	e	u	m_m	mam	mem	mum	mum

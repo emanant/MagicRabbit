@@ -1,0 +1,15 @@
+[
+    "percentComplete",
+    "learnerName",
+    "exercise",
+    "gameSummarizer",
+    "completionUnitEvaluator",
+    "completionUnits",
+    "lastNode",
+    "lastTrainingDay",
+    "trainingDay",
+    "sessionTrials",
+    "backgroundID",
+    "sessionScore",
+    "logObj"
+]

@@ -1,0 +1,9 @@
+{
+    "resolution": "main",
+    "tree": {
+        "src": "/Users/vdu/workspace/scilearn/ffwd/ng-ffwd/<%=exerciseName%>/cocos2d/typings.json",
+        "raw": "file:./cocos2d/typings.json",
+        "main": "cocos2d-lib.d.ts",
+        "name": "cocos2d"
+    }
+}

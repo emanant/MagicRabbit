@@ -1,0 +1,105 @@
+*~
+.DS_Store
+
+# IntelliJ project files
+.idea
+*.iml
+frameworks/cocos2d-x/*
+simulator
+
+**/proj.android/obj
+**/proj.android/bin
+**/proj.android/assets
+**/proj.android/libs
+**/app/obj
+
+#includes
+!frameworks/cocos2d-x/extensions
+!frameworks/cocos2d-x/cocos
+!frameworks/cocos2d-x/tools/tojs
+
+**/proj.android-studio/app/obj/*
+**/proj.android-studio/app/bin/*
+**/proj.android-studio/app/assets/*
+**/proj.android-studio/app/libs/*
+**/proj.android-studio/app/build/*
+**/proj.android-studio/build/*
+
+captures/
+local.properties
+.gradle/
+proguard/
+
+# Log Files
+*.log
+
+# Android Studio Navigation editor temp files
+.navigation/
+*.apk
+*.ap_
+
+# Files for the Dalvik VM
+*.dex
+
+# Java class files
+*.class
+
+## crashlytics files
+csyms
+csyms_archive
+
+#ios specific
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
+xcuserdata
+## xcode
+*.xccheckout
+*.moved-aside
+*.xcuserstate
+*.xcscmblueprint
+
+**/proj.ios_mac/build
+**/proj.linux
+**/proj.win8.1-universal
+**/Debug.win32
+
+src/platform/res/tv/videos
+src/platform/res/tv/thumbImage
+
+#web
+NativeApps
+NativeZips
+publish
+
+frameworks/runtime-src/proj.android-studio/app/res/raw
+frameworks/cocos2d-x
+
+#build dir
+build
+uploads/
+
+#resource zips
+**/res/*.zip
+
+#node
+node_modules/
+.vscode
+doc
+src/ExerciseTemplate/res/audio.zip
+src/ExerciseTemplate/res/fonts.zip
+src/ExerciseTemplate/res/ldpi.zip
+src/ExerciseTemplate/res/ldpiGenericLoading.zip
+src/ExerciseTemplate/res/mdpi.zip
+src/ExerciseTemplate/res/mdpiGenericLoading.zip
+*.js
+*.map
+
+flash/ExerciseTemplate/RECOVER_*
+!preprocessor.js
+src/Progression/InitialStates/*.json

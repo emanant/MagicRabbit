@@ -1,0 +1,126 @@
+---
+fileType: content
+id: B
+type: UnguardedNodeServer
+description: Root Node
+tags:
+    - AllItems
+children:
+    - id: B_1
+      type: RepeatUntilSuccess
+      switchLevelsFlag: standardLevelSwitch
+      guard: "(${B_1_self} !== true)"
+      description: Standard Mode
+      override:
+          playReward: true
+          contributeToScore: true
+      tags:
+          - StandardMode
+      children:
+          - id: B_1_1
+            type: RepeatUntilSuccess
+            switchLevelsFlag: standardLevel1SetSwitch
+            description: standard mode lvl 1
+            children:
+                - id: B_1_1_1
+                  description: level 1 set 1
+                  type: InternalNodeSequencer
+                  decorators:
+                      - name: CheckStreakDecorator
+                        options:
+                            shouldPass: false
+                            length: 5
+                            warningFlagName: trackingWarning
+                  onPassChangeBy:
+                      - fromIndex: 0
+                        changeBy: 1
+                      - fromIndex: 4
+                        changeBy: 4
+                      - fromIndex: 9
+                        changeBy: 2
+                  onFailChangeBy:
+                      - fromIndex: 0
+                        changeBy: 0
+                      - fromIndex: 1
+                        changeBy: -1
+                      - fromIndex: 4
+                        changeBy: -2
+                      - fromIndex: 9
+                        changeBy: -1
+                  children:
+                      - id: B_1_1_1_1
+                        type: LeafSequencer
+                        tracking:
+                            flag: trackingStop
+                            consecutiveCorrectRequired: 4
+                            moveBy: 1
+                        onCorrect:
+                            - tries: 3
+                              toPlay: 3
+                              moveBy: 1
+                        onIncorrect:
+                            - tries: 1
+                              toPlay: 1
+                              moveBy: -1
+                        children:
+                            - id: B_1_1_1_1_1
+                              type: DataNode
+                              data:
+                                  item: L1S1S1
+                                  freq: "1000"
+                                  isi: "500"
+                                  duration: "80"
+                                  viewID: com.scilearn.BuzzFlyHC.NormalMechanic
+                      - id: B_1_1_1_2
+                        type: LeafSequencer
+                        tracking:
+                            flag: trackingStop
+                            consecutiveCorrectRequired: 4
+                            moveBy: 1
+                        onCorrect:
+                            - tries: 3
+                              toPlay: 3
+                              moveBy: 1
+                        onIncorrect:
+                            - tries: 1
+                              toPlay: 1
+                              moveBy: -1
+                        children:
+                            - id: B_1_1_1_2_1
+                              type: DataNode
+                              data:
+                                  item: L1S1S2
+                                  freq: "1000"
+                                  isi: "500"
+                                  duration: "80"
+                                  viewID: com.scilearn.BuzzFlyHC.NormalMechanic
+                      - id: B_1_1_1_3
+                        type: LeafSequencer
+                        tracking:
+                            flag: trackingStop
+                            consecutiveCorrectRequired: 4
+                            moveBy: 1
+                        onCorrect:
+                            - tries: 3
+                              toPlay: 3
+                              moveBy: 1
+                        onIncorrect:
+                            - tries: 1
+                              toPlay: 1
+                              moveBy: -1
+                        children:
+                            - id: B_1_1_1_3_1
+                              type: DataNode
+                              data:
+                                  item: L1S1S3
+                                  freq: "1000"
+                                  isi: "500"
+                                  duration: "80"
+                                  viewID: com.scilearn.BuzzFlyHC.NormalMechanic
+    - id: B_2
+      type: DataNode
+      description: GameOver Node
+      data:
+          item: GAMEOVER
+          gameOver: true
+          viewID: com.scilearn.BuzzFlyHC.NormalMechanic
