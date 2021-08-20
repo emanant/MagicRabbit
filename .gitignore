@@ -97,7 +97,7 @@ src/ExerciseTemplate/res/ldpi.zip
 src/ExerciseTemplate/res/ldpiGenericLoading.zip
 src/ExerciseTemplate/res/mdpi.zip
 src/ExerciseTemplate/res/mdpiGenericLoading.zip
-*.js
+# *.js
 *.map
 
 flash/ExerciseTemplate/RECOVER_*
