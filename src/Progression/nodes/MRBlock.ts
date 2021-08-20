@@ -10,9 +10,10 @@ import * as _ from "lodash";
  * Round starts with a scrambled word(displayOnly) followed by 10 sequential words.
  * 90% correct criteria (9/10).
  */
-
+const TRIALS_PER_BLOCK = 20;
 export default class MRBlock extends MetadataNode {
 	options: IMRBlockOptions;
+
 	constructor(id, options: IMRBlockOptions) {
 		super(id, options);
 		this.options = options;
@@ -27,7 +28,7 @@ export default class MRBlock extends MetadataNode {
 		this.childrenMetadata = tick.blackboard.get("childrenMetadata", tick.tree.id, this.id);
 		this.unvisitedNodes =
 			tick.blackboard.get("unvisitedNodes", tick.tree.id, this.id) ||
-			RandomizationHelper.shuffle(_.range(this.children.length)).slice(0, 20);
+			RandomizationHelper.shuffle(_.range(this.children.length)).slice(0, TRIALS_PER_BLOCK);
 		this.passedNodes = tick.blackboard.get("passedNodes", tick.tree.id, this.id) || [];
 		this.failedNodes = tick.blackboard.get("failedNodes", tick.tree.id, this.id) || [];
 	}
@@ -114,18 +115,18 @@ export default class MRBlock extends MetadataNode {
 		let serveCount = this.childrenMetadata[servedChildIndex].serveCount;
 
 		switch (result.status) {
-			case Status.RUNNING:
-				break;
 			case Status.SUCCESS:
 				_.remove(this.failedNodes, (childIndex) => childIndex === servedChildIndex);
 				this.passedNodes.push(servedChildIndex);
+				break;
 			case Status.FAILURE:
 				this.failedNodes.push(servedChildIndex);
 				failCount++;
-			default:
-				_.remove(this.unvisitedNodes, (childIndex) => childIndex === servedChildIndex);
-				serveCount++;
 				break;
+		}
+		if (result.status !== Status.RUNNING) {
+			_.remove(this.unvisitedNodes, (childIndex) => childIndex === servedChildIndex);
+			serveCount++;
 		}
 
 		this.setChildMetadata(servedChildIndex, {
@@ -133,6 +134,19 @@ export default class MRBlock extends MetadataNode {
 			failCount: failCount,
 			status: result.status,
 		});
+	}
+
+	protected evaluateNode(tick: Tick): Status {
+		var percentCorrect = this.options.percentCorrect;
+		var totalPassedTrials = this.passedNodes.length;
+		// var totalTrials = TRIALS_PER_BLOCK;
+		var totalTrials = this.passedNodes.length + this.unvisitedNodes.length + this.failedNodes.length;
+		console.log("EVAL:", totalTrials, totalPassedTrials);
+		if (totalPassedTrials / totalTrials >= percentCorrect / 100) {
+			return Status.SUCCESS;
+		} else {
+			return Status.FAILURE;
+		}
 	}
 }
 

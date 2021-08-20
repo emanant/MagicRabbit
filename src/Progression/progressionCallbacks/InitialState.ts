@@ -1,4 +1,5 @@
 export default {
-    "exercise": "Exercise-Template",
-    "learnerName": "VincentAndJen"
+	exercise: "Exercise-Template",
+	learnerName: "Manan",
+	passedUnitsArr: [],
 };

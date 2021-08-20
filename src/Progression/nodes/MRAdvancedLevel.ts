@@ -10,6 +10,8 @@ import RandomizationHelper from "@scilearn/learnflow-sdk/lib/helpers/Randomizati
  * @DESC BeginnerBlockNode serves BlockNode randomly
  * Failed texts are served again at the end of level
  */
+
+const ROUNDS_PER_BLOCK = 20;
 export default class MRAdvancedLevel extends MetadataNode {
 	options: IBaseNodeOptions;
 	constructor(id, options: IBaseNodeOptions) {
@@ -25,7 +27,7 @@ export default class MRAdvancedLevel extends MetadataNode {
 		this.childrenMetadata = tick.blackboard.get("childrenMetadata", tick.tree.id, this.id);
 		this.unvisitedNodes =
 			tick.blackboard.get("unvisitedNodes", tick.tree.id, this.id) ||
-			RandomizationHelper.shuffle(_.range(this.children.length)).slice(0, 20);
+			RandomizationHelper.shuffle(_.range(this.children.length)).slice(0, ROUNDS_PER_BLOCK);
 		this.passedNodes = tick.blackboard.get("passedNodes", tick.tree.id, this.id) || [];
 		this.failedNodes = tick.blackboard.get("failedNodes", tick.tree.id, this.id) || [];
 	}
@@ -120,20 +122,20 @@ export default class MRAdvancedLevel extends MetadataNode {
 		let serveCount = this.childrenMetadata[servedChildIndex].serveCount;
 
 		switch (result.status) {
-			case Status.RUNNING:
-				break;
 			case Status.SUCCESS:
-				_.remove(this.failedNodes, (childIndex) => childIndex === servedChildIndex);
 				this.passedNodes.push(servedChildIndex);
+				_.remove(this.failedNodes, (childIndex) => childIndex === servedChildIndex);
+				break;
 			case Status.FAILURE:
 				failCount = (failCount + 1) % 3;
 				if (failCount === 1) {
 					this.failedNodes.push(servedChildIndex);
 				}
-			default:
-				_.remove(this.unvisitedNodes, (childIndex) => childIndex === servedChildIndex);
-				serveCount++;
 				break;
+		}
+		if (result.status !== Status.RUNNING) {
+			_.remove(this.unvisitedNodes, (childIndex) => childIndex === servedChildIndex);
+			serveCount++;
 		}
 
 		this.setChildMetadata(servedChildIndex, {
@@ -157,8 +159,11 @@ export default class MRAdvancedLevel extends MetadataNode {
 	private updatePassedUnits(status: Status, tick: Tick, id: string): void {
 		if (status === Status.SUCCESS) {
 			tick.blackboard.set("passedUnits", (tick.blackboard.get("passedUnits") || 0) + 1);
-			// for debugging
-			tick.blackboard.set("passedUnitsArr", (tick.blackboard.get("passedUnitsArr") || []).push(id));
+			// // for debugging
+			// TODO: why is this a number?
+			// let passedUnitsArr = tick.blackboard.get("passedUnitsArr");
+			// console.log(typeof passedUnitsArr);
+			// tick.blackboard.set("passedUnitsArr", passedUnitsArr.push(id));
 		}
 	}
 }

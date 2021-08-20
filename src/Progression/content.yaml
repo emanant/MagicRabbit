@@ -8,9 +8,8 @@
   children: 
     - 
       id: "B_1"
-      type: "MRRound"
+      type: "DNWrapper"
       guard: "(!(${TutorialComplete}))"
-      description: "Instruction wrapper"
       override: 
         viewID: "com.scilearn.MagicRabbit.Introduction"
         tutorial: true
@@ -19,17 +18,13 @@
       children: 
         - 
           id: "B_1_1"
-          type: "DNWrapper"
-          children: 
-            - 
-              id: "B_1_1_D"
-              type: "DataNode"
-              description: "Tutorial segment"
-              data: 
-                answer: ""
-                foil1: ""
-                foil2: ""
-                foil3: ""
+          type: "DataNode"
+          description: "Tutorial segment"
+          data: 
+            answer: ""
+            foil1: ""
+            foil2: ""
+            foil3: ""
     - 
       id: "B_2"
       type: "InternalNodeSequencer"
@@ -54,7 +49,7 @@
             - 
               id: "B_2_1_1"
               description: "Block 1"
-              type: "MRBlockNode"
+              type: "MRBlock"
               override: 
                 block: 1
               percentCorrect: 90
@@ -1062,7 +1057,7 @@
             - 
               id: "B_2_1_2"
               description: "Block 2"
-              type: "MRBlockNode"
+              type: "MRBlock"
               override: 
                 block: 2
               percentCorrect: 90
@@ -2070,7 +2065,7 @@
             - 
               id: "B_2_1_3"
               description: "Block 3"
-              type: "MRBlockNode"
+              type: "MRBlock"
               override: 
                 block: 3
               percentCorrect: 90
@@ -3078,7 +3073,7 @@
             - 
               id: "B_2_1_4"
               description: "Block 4"
-              type: "MRBlockNode"
+              type: "MRBlock"
               override: 
                 block: 4
               percentCorrect: 90
@@ -4086,7 +4081,7 @@
             - 
               id: "B_2_1_5"
               description: "Block 5"
-              type: "MRBlockNode"
+              type: "MRBlock"
               override: 
                 block: 5
               percentCorrect: 90
@@ -5094,7 +5089,7 @@
             - 
               id: "B_2_1_6"
               description: "Block 6"
-              type: "MRBlockNode"
+              type: "MRBlock"
               override: 
                 block: 6
               percentCorrect: 90
@@ -6102,7 +6097,7 @@
             - 
               id: "B_2_1_7"
               description: "Block 7"
-              type: "MRBlockNode"
+              type: "MRBlock"
               override: 
                 block: 7
               percentCorrect: 90
@@ -7360,7 +7355,7 @@
             - 
               id: "B_2_1_8"
               description: "Block 8"
-              type: "MRBlockNode"
+              type: "MRBlock"
               override: 
                 block: 8
               percentCorrect: 90
@@ -8625,7 +8620,7 @@
             - 
               id: "B_2_2_1"
               description: "Round 1"
-              type: "MRRoundNode"
+              type: "MRRound"
               override: 
                 round: 1
               percentCorrect: 90
@@ -8908,7 +8903,7 @@
             - 
               id: "B_2_2_2"
               description: "Round 2"
-              type: "MRRoundNode"
+              type: "MRRound"
               override: 
                 round: 2
               percentCorrect: 90
@@ -9191,7 +9186,7 @@
             - 
               id: "B_2_2_3"
               description: "Round 3"
-              type: "MRRoundNode"
+              type: "MRRound"
               override: 
                 round: 3
               percentCorrect: 90
@@ -9474,7 +9469,7 @@
             - 
               id: "B_2_2_4"
               description: "Round 4"
-              type: "MRRoundNode"
+              type: "MRRound"
               override: 
                 round: 4
               percentCorrect: 90
@@ -9757,7 +9752,7 @@
             - 
               id: "B_2_2_5"
               description: "Round 5"
-              type: "MRRoundNode"
+              type: "MRRound"
               override: 
                 round: 5
               percentCorrect: 90
@@ -10040,7 +10035,7 @@
             - 
               id: "B_2_2_6"
               description: "Round 6"
-              type: "MRRoundNode"
+              type: "MRRound"
               override: 
                 round: 6
               percentCorrect: 90
@@ -10323,7 +10318,7 @@
             - 
               id: "B_2_2_7"
               description: "Round 7"
-              type: "MRRoundNode"
+              type: "MRRound"
               override: 
                 round: 7
               percentCorrect: 90
@@ -10606,7 +10601,7 @@
             - 
               id: "B_2_2_8"
               description: "Round 8"
-              type: "MRRoundNode"
+              type: "MRRound"
               override: 
                 round: 8
               percentCorrect: 90
@@ -10889,7 +10884,7 @@
             - 
               id: "B_2_2_9"
               description: "Round 9"
-              type: "MRRoundNode"
+              type: "MRRound"
               override: 
                 round: 9
               percentCorrect: 90
@@ -11172,7 +11167,7 @@
             - 
               id: "B_2_2_10"
               description: "Round 10"
-              type: "MRRoundNode"
+              type: "MRRound"
               override: 
                 round: 10
               percentCorrect: 90
@@ -11455,7 +11450,7 @@
             - 
               id: "B_2_2_11"
               description: "Round 11"
-              type: "MRRoundNode"
+              type: "MRRound"
               override: 
                 round: 11
               percentCorrect: 90
@@ -11738,7 +11733,7 @@
             - 
               id: "B_2_2_12"
               description: "Round 12"
-              type: "MRRoundNode"
+              type: "MRRound"
               override: 
                 round: 12
               percentCorrect: 90
@@ -12021,7 +12016,7 @@
             - 
               id: "B_2_2_13"
               description: "Round 13"
-              type: "MRRoundNode"
+              type: "MRRound"
               override: 
                 round: 13
               percentCorrect: 90
@@ -12304,7 +12299,7 @@
             - 
               id: "B_2_2_14"
               description: "Round 14"
-              type: "MRRoundNode"
+              type: "MRRound"
               override: 
                 round: 14
               percentCorrect: 90
@@ -12587,7 +12582,7 @@
             - 
               id: "B_2_2_15"
               description: "Round 15"
-              type: "MRRoundNode"
+              type: "MRRound"
               override: 
                 round: 15
               percentCorrect: 90
@@ -12870,7 +12865,7 @@
             - 
               id: "B_2_2_16"
               description: "Round 16"
-              type: "MRRoundNode"
+              type: "MRRound"
               override: 
                 round: 16
               percentCorrect: 90
@@ -13153,7 +13148,7 @@
             - 
               id: "B_2_2_17"
               description: "Round 17"
-              type: "MRRoundNode"
+              type: "MRRound"
               override: 
                 round: 17
               percentCorrect: 90
@@ -13436,7 +13431,7 @@
             - 
               id: "B_2_2_18"
               description: "Round 18"
-              type: "MRRoundNode"
+              type: "MRRound"
               override: 
                 round: 18
               percentCorrect: 90
@@ -13719,7 +13714,7 @@
             - 
               id: "B_2_2_19"
               description: "Round 19"
-              type: "MRRoundNode"
+              type: "MRRound"
               override: 
                 round: 19
               percentCorrect: 90
@@ -14002,7 +13997,7 @@
             - 
               id: "B_2_2_20"
               description: "Round 20"
-              type: "MRRoundNode"
+              type: "MRRound"
               override: 
                 round: 20
               percentCorrect: 90
@@ -14285,7 +14280,7 @@
             - 
               id: "B_2_2_21"
               description: "Round 21"
-              type: "MRRoundNode"
+              type: "MRRound"
               override: 
                 round: 21
               percentCorrect: 90
@@ -14568,7 +14563,7 @@
             - 
               id: "B_2_2_22"
               description: "Round 22"
-              type: "MRRoundNode"
+              type: "MRRound"
               override: 
                 round: 22
               percentCorrect: 90
@@ -14851,7 +14846,7 @@
             - 
               id: "B_2_2_23"
               description: "Round 23"
-              type: "MRRoundNode"
+              type: "MRRound"
               override: 
                 round: 23
               percentCorrect: 90
@@ -15134,7 +15129,7 @@
             - 
               id: "B_2_2_24"
               description: "Round 24"
-              type: "MRRoundNode"
+              type: "MRRound"
               override: 
                 round: 24
               percentCorrect: 90
@@ -15417,7 +15412,7 @@
             - 
               id: "B_2_2_25"
               description: "Round 25"
-              type: "MRRoundNode"
+              type: "MRRound"
               override: 
                 round: 25
               percentCorrect: 90
@@ -15700,7 +15695,7 @@
             - 
               id: "B_2_2_26"
               description: "Round 26"
-              type: "MRRoundNode"
+              type: "MRRound"
               override: 
                 round: 26
               percentCorrect: 90
@@ -15983,7 +15978,7 @@
             - 
               id: "B_2_2_27"
               description: "Round 27"
-              type: "MRRoundNode"
+              type: "MRRound"
               override: 
                 round: 27
               percentCorrect: 90
@@ -16266,7 +16261,7 @@
             - 
               id: "B_2_2_28"
               description: "Round 28"
-              type: "MRRoundNode"
+              type: "MRRound"
               override: 
                 round: 28
               percentCorrect: 90
@@ -16549,7 +16544,7 @@
             - 
               id: "B_2_2_29"
               description: "Round 29"
-              type: "MRRoundNode"
+              type: "MRRound"
               override: 
                 round: 29
               percentCorrect: 90
@@ -16832,7 +16827,7 @@
             - 
               id: "B_2_2_30"
               description: "Round 30"
-              type: "MRRoundNode"
+              type: "MRRound"
               override: 
                 round: 30
               percentCorrect: 90
@@ -17115,7 +17110,7 @@
             - 
               id: "B_2_2_31"
               description: "Round 31"
-              type: "MRRoundNode"
+              type: "MRRound"
               override: 
                 round: 31
               percentCorrect: 90
@@ -17398,7 +17393,7 @@
             - 
               id: "B_2_2_32"
               description: "Round 32"
-              type: "MRRoundNode"
+              type: "MRRound"
               override: 
                 round: 32
               percentCorrect: 90
@@ -17681,7 +17676,7 @@
             - 
               id: "B_2_2_33"
               description: "Round 33"
-              type: "MRRoundNode"
+              type: "MRRound"
               override: 
                 round: 33
               percentCorrect: 90
@@ -17964,7 +17959,7 @@
             - 
               id: "B_2_2_34"
               description: "Round 34"
-              type: "MRRoundNode"
+              type: "MRRound"
               override: 
                 round: 34
               percentCorrect: 90
@@ -18247,7 +18242,7 @@
             - 
               id: "B_2_2_35"
               description: "Round 35"
-              type: "MRRoundNode"
+              type: "MRRound"
               override: 
                 round: 35
               percentCorrect: 90
@@ -18530,7 +18525,7 @@
             - 
               id: "B_2_2_36"
               description: "Round 36"
-              type: "MRRoundNode"
+              type: "MRRound"
               override: 
                 round: 36
               percentCorrect: 90
@@ -18813,7 +18808,7 @@
             - 
               id: "B_2_2_37"
               description: "Round 37"
-              type: "MRRoundNode"
+              type: "MRRound"
               override: 
                 round: 37
               percentCorrect: 90
@@ -19096,7 +19091,7 @@
             - 
               id: "B_2_2_38"
               description: "Round 38"
-              type: "MRRoundNode"
+              type: "MRRound"
               override: 
                 round: 38
               percentCorrect: 90
@@ -19379,7 +19374,7 @@
             - 
               id: "B_2_2_39"
               description: "Round 39"
-              type: "MRRoundNode"
+              type: "MRRound"
               override: 
                 round: 39
               percentCorrect: 90
@@ -19662,7 +19657,7 @@
             - 
               id: "B_2_2_40"
               description: "Round 40"
-              type: "MRRoundNode"
+              type: "MRRound"
               override: 
                 round: 40
               percentCorrect: 90
@@ -19952,7 +19947,7 @@
             - 
               id: "B_2_3_9"
               description: "Block 9"
-              type: "MRBlockNode"
+              type: "MRBlock"
               override: 
                 block: 9
               percentCorrect: 90
@@ -20960,7 +20955,7 @@
             - 
               id: "B_2_3_10"
               description: "Block 10"
-              type: "MRBlockNode"
+              type: "MRBlock"
               override: 
                 block: 10
               percentCorrect: 90
@@ -21968,7 +21963,7 @@
             - 
               id: "B_2_3_11"
               description: "Block 11"
-              type: "MRBlockNode"
+              type: "MRBlock"
               override: 
                 block: 11
               percentCorrect: 90
@@ -22976,7 +22971,7 @@
             - 
               id: "B_2_3_12"
               description: "Block 12"
-              type: "MRBlockNode"
+              type: "MRBlock"
               override: 
                 block: 12
               percentCorrect: 90
@@ -23984,7 +23979,7 @@
             - 
               id: "B_2_3_13"
               description: "Block 13"
-              type: "MRBlockNode"
+              type: "MRBlock"
               override: 
                 block: 13
               percentCorrect: 90
@@ -24992,7 +24987,7 @@
             - 
               id: "B_2_3_14"
               description: "Block 14"
-              type: "MRBlockNode"
+              type: "MRBlock"
               override: 
                 block: 14
               percentCorrect: 90
@@ -26000,7 +25995,7 @@
             - 
               id: "B_2_3_15"
               description: "Block 15"
-              type: "MRBlockNode"
+              type: "MRBlock"
               override: 
                 block: 15
               percentCorrect: 90
@@ -27258,7 +27253,7 @@
             - 
               id: "B_2_3_16"
               description: "Block 16"
-              type: "MRBlockNode"
+              type: "MRBlock"
               override: 
                 block: 16
               percentCorrect: 90
@@ -28523,7 +28518,7 @@
             - 
               id: "B_2_4_1"
               description: "Round 1"
-              type: "MRRoundNode"
+              type: "MRRound"
               override: 
                 round: 1
               percentCorrect: 90
@@ -28806,7 +28801,7 @@
             - 
               id: "B_2_4_2"
               description: "Round 2"
-              type: "MRRoundNode"
+              type: "MRRound"
               override: 
                 round: 2
               percentCorrect: 90
@@ -29089,7 +29084,7 @@
             - 
               id: "B_2_4_3"
               description: "Round 3"
-              type: "MRRoundNode"
+              type: "MRRound"
               override: 
                 round: 3
               percentCorrect: 90
@@ -29372,7 +29367,7 @@
             - 
               id: "B_2_4_4"
               description: "Round 4"
-              type: "MRRoundNode"
+              type: "MRRound"
               override: 
                 round: 4
               percentCorrect: 90
@@ -29655,7 +29650,7 @@
             - 
               id: "B_2_4_5"
               description: "Round 5"
-              type: "MRRoundNode"
+              type: "MRRound"
               override: 
                 round: 5
               percentCorrect: 90
@@ -29938,7 +29933,7 @@
             - 
               id: "B_2_4_6"
               description: "Round 6"
-              type: "MRRoundNode"
+              type: "MRRound"
               override: 
                 round: 6
               percentCorrect: 90
@@ -30221,7 +30216,7 @@
             - 
               id: "B_2_4_7"
               description: "Round 7"
-              type: "MRRoundNode"
+              type: "MRRound"
               override: 
                 round: 7
               percentCorrect: 90
@@ -30504,7 +30499,7 @@
             - 
               id: "B_2_4_8"
               description: "Round 8"
-              type: "MRRoundNode"
+              type: "MRRound"
               override: 
                 round: 8
               percentCorrect: 90
@@ -30787,7 +30782,7 @@
             - 
               id: "B_2_4_9"
               description: "Round 9"
-              type: "MRRoundNode"
+              type: "MRRound"
               override: 
                 round: 9
               percentCorrect: 90
@@ -31070,7 +31065,7 @@
             - 
               id: "B_2_4_10"
               description: "Round 10"
-              type: "MRRoundNode"
+              type: "MRRound"
               override: 
                 round: 10
               percentCorrect: 90
@@ -31353,7 +31348,7 @@
             - 
               id: "B_2_4_11"
               description: "Round 11"
-              type: "MRRoundNode"
+              type: "MRRound"
               override: 
                 round: 11
               percentCorrect: 90
@@ -31636,7 +31631,7 @@
             - 
               id: "B_2_4_12"
               description: "Round 12"
-              type: "MRRoundNode"
+              type: "MRRound"
               override: 
                 round: 12
               percentCorrect: 90
@@ -31919,7 +31914,7 @@
             - 
               id: "B_2_4_13"
               description: "Round 13"
-              type: "MRRoundNode"
+              type: "MRRound"
               override: 
                 round: 13
               percentCorrect: 90
@@ -32202,7 +32197,7 @@
             - 
               id: "B_2_4_14"
               description: "Round 14"
-              type: "MRRoundNode"
+              type: "MRRound"
               override: 
                 round: 14
               percentCorrect: 90
@@ -32485,7 +32480,7 @@
             - 
               id: "B_2_4_15"
               description: "Round 15"
-              type: "MRRoundNode"
+              type: "MRRound"
               override: 
                 round: 15
               percentCorrect: 90
@@ -32768,7 +32763,7 @@
             - 
               id: "B_2_4_16"
               description: "Round 16"
-              type: "MRRoundNode"
+              type: "MRRound"
               override: 
                 round: 16
               percentCorrect: 90
@@ -33051,7 +33046,7 @@
             - 
               id: "B_2_4_17"
               description: "Round 17"
-              type: "MRRoundNode"
+              type: "MRRound"
               override: 
                 round: 17
               percentCorrect: 90
@@ -33334,7 +33329,7 @@
             - 
               id: "B_2_4_18"
               description: "Round 18"
-              type: "MRRoundNode"
+              type: "MRRound"
               override: 
                 round: 18
               percentCorrect: 90
@@ -33617,7 +33612,7 @@
             - 
               id: "B_2_4_19"
               description: "Round 19"
-              type: "MRRoundNode"
+              type: "MRRound"
               override: 
                 round: 19
               percentCorrect: 90
@@ -33900,7 +33895,7 @@
             - 
               id: "B_2_4_20"
               description: "Round 20"
-              type: "MRRoundNode"
+              type: "MRRound"
               override: 
                 round: 20
               percentCorrect: 90
@@ -34183,7 +34178,7 @@
             - 
               id: "B_2_4_21"
               description: "Round 21"
-              type: "MRRoundNode"
+              type: "MRRound"
               override: 
                 round: 21
               percentCorrect: 90
@@ -34466,7 +34461,7 @@
             - 
               id: "B_2_4_22"
               description: "Round 22"
-              type: "MRRoundNode"
+              type: "MRRound"
               override: 
                 round: 22
               percentCorrect: 90
@@ -34749,7 +34744,7 @@
             - 
               id: "B_2_4_23"
               description: "Round 23"
-              type: "MRRoundNode"
+              type: "MRRound"
               override: 
                 round: 23
               percentCorrect: 90
@@ -35032,7 +35027,7 @@
             - 
               id: "B_2_4_24"
               description: "Round 24"
-              type: "MRRoundNode"
+              type: "MRRound"
               override: 
                 round: 24
               percentCorrect: 90
@@ -35315,7 +35310,7 @@
             - 
               id: "B_2_4_25"
               description: "Round 25"
-              type: "MRRoundNode"
+              type: "MRRound"
               override: 
                 round: 25
               percentCorrect: 90
@@ -35598,7 +35593,7 @@
             - 
               id: "B_2_4_26"
               description: "Round 26"
-              type: "MRRoundNode"
+              type: "MRRound"
               override: 
                 round: 26
               percentCorrect: 90
@@ -35881,7 +35876,7 @@
             - 
               id: "B_2_4_27"
               description: "Round 27"
-              type: "MRRoundNode"
+              type: "MRRound"
               override: 
                 round: 27
               percentCorrect: 90
@@ -36164,7 +36159,7 @@
             - 
               id: "B_2_4_28"
               description: "Round 28"
-              type: "MRRoundNode"
+              type: "MRRound"
               override: 
                 round: 28
               percentCorrect: 90
@@ -36447,7 +36442,7 @@
             - 
               id: "B_2_4_29"
               description: "Round 29"
-              type: "MRRoundNode"
+              type: "MRRound"
               override: 
                 round: 29
               percentCorrect: 90
@@ -36730,7 +36725,7 @@
             - 
               id: "B_2_4_30"
               description: "Round 30"
-              type: "MRRoundNode"
+              type: "MRRound"
               override: 
                 round: 30
               percentCorrect: 90
@@ -37013,7 +37008,7 @@
             - 
               id: "B_2_4_31"
               description: "Round 31"
-              type: "MRRoundNode"
+              type: "MRRound"
               override: 
                 round: 31
               percentCorrect: 90
@@ -37296,7 +37291,7 @@
             - 
               id: "B_2_4_32"
               description: "Round 32"
-              type: "MRRoundNode"
+              type: "MRRound"
               override: 
                 round: 32
               percentCorrect: 90
@@ -37579,7 +37574,7 @@
             - 
               id: "B_2_4_33"
               description: "Round 33"
-              type: "MRRoundNode"
+              type: "MRRound"
               override: 
                 round: 33
               percentCorrect: 90
@@ -37862,7 +37857,7 @@
             - 
               id: "B_2_4_34"
               description: "Round 34"
-              type: "MRRoundNode"
+              type: "MRRound"
               override: 
                 round: 34
               percentCorrect: 90
@@ -38145,7 +38140,7 @@
             - 
               id: "B_2_4_35"
               description: "Round 35"
-              type: "MRRoundNode"
+              type: "MRRound"
               override: 
                 round: 35
               percentCorrect: 90
@@ -38428,7 +38423,7 @@
             - 
               id: "B_2_4_36"
               description: "Round 36"
-              type: "MRRoundNode"
+              type: "MRRound"
               override: 
                 round: 36
               percentCorrect: 90
@@ -38711,7 +38706,7 @@
             - 
               id: "B_2_4_37"
               description: "Round 37"
-              type: "MRRoundNode"
+              type: "MRRound"
               override: 
                 round: 37
               percentCorrect: 90
@@ -38994,7 +38989,7 @@
             - 
               id: "B_2_4_38"
               description: "Round 38"
-              type: "MRRoundNode"
+              type: "MRRound"
               override: 
                 round: 38
               percentCorrect: 90
@@ -39277,7 +39272,7 @@
             - 
               id: "B_2_4_39"
               description: "Round 39"
-              type: "MRRoundNode"
+              type: "MRRound"
               override: 
                 round: 39
               percentCorrect: 90
@@ -39560,7 +39555,7 @@
             - 
               id: "B_2_4_40"
               description: "Round 40"
-              type: "MRRoundNode"
+              type: "MRRound"
               override: 
                 round: 40
               percentCorrect: 90

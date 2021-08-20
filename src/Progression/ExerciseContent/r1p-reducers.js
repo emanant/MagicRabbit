@@ -47,7 +47,7 @@ let BlockReducer = (aggregator, line, idx) => {
 	let blockNodes = {
 		id: `${gameRootId}_${currentLevel}_${currentBlockOrRound}`,
 		description: `Block ${currentBlockOrRound}`,
-		type: `MRBlockNode`,
+		type: `MRBlock`,
 		override: {
 			block: parseInt(currentBlockOrRound),
 		},
@@ -70,7 +70,7 @@ let RoundReducer = (aggregator, line, idx) => {
 	let roundNodes = {
 		id: `${gameRootId}_${currentLevel}_${currentBlockOrRound}`,
 		description: `Round ${currentBlockOrRound}`,
-		type: `MRRoundNode`,
+		type: `MRRound`,
 		override: {
 			round: parseInt(currentBlockOrRound),
 		},
@@ -135,9 +135,8 @@ let gamePlayDataNode = (line) => {
 let getTutorialNode = () => {
 	return {
 		id: "B_1",
-		type: "MRRound",
+		type: "DNWrapper",
 		guard: "(!(${TutorialComplete}))",
-		description: "Instruction wrapper",
 		override: {
 			viewID: "com.scilearn.MagicRabbit.Introduction",
 			tutorial: true,
@@ -147,20 +146,14 @@ let getTutorialNode = () => {
 		children: [
 			{
 				id: "B_1_1",
-				type: "DNWrapper",
-				children: [
-					{
-						id: "B_1_1_D",
-						type: "DataNode",
-						description: "Tutorial segment",
-						data: {
-							answer: "",
-							foil1: "",
-							foil2: "",
-							foil3: "",
-						},
-					},
-				],
+				type: "DataNode",
+				description: "Tutorial segment",
+				data: {
+					answer: "",
+					foil1: "",
+					foil2: "",
+					foil3: "",
+				},
 			},
 		],
 	};

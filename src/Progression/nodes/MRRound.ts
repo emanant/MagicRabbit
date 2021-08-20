@@ -92,18 +92,18 @@ export default class MRRound extends MetadataNode {
 		let serveCount = this.childrenMetadata[servedChildIndex].serveCount;
 
 		switch (result.status) {
-			case Status.RUNNING:
-				break;
 			case Status.SUCCESS:
 				_.remove(this.failedNodes, (childIndex) => childIndex === servedChildIndex);
 				this.passedNodes.push(servedChildIndex);
+				break;
 			case Status.FAILURE:
 				this.failedNodes.push(servedChildIndex);
 				failCount++;
-			default:
-				_.remove(this.unvisitedNodes, (childIndex) => childIndex === servedChildIndex);
-				serveCount++;
 				break;
+		}
+		if (result.status !== Status.RUNNING) {
+			_.remove(this.unvisitedNodes, (childIndex) => childIndex === servedChildIndex);
+			serveCount++;
 		}
 
 		this.setChildMetadata(servedChildIndex, {
@@ -111,6 +111,18 @@ export default class MRRound extends MetadataNode {
 			failCount: failCount,
 			status: result.status,
 		});
+	}
+
+	protected evaluateNode(tick: Tick): Status {
+		var percentCorrect = this.options.percentCorrect;
+		var totalPassedTrials = this.passedNodes.length;
+		// var totalTrials = TRIALS_PER_BLOCK;
+		var totalTrials = this.passedNodes.length + this.unvisitedNodes.length + this.failedNodes.length;
+		if (totalPassedTrials / totalTrials >= percentCorrect / 100) {
+			return Status.SUCCESS;
+		} else {
+			return Status.FAILURE;
+		}
 	}
 }
 
