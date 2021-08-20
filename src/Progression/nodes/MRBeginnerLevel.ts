@@ -1,40 +1,21 @@
-import RandomizationHelper from "@scilearn/learnflow-sdk/lib/helpers/RandomizationHelper";
-import ITickResult from "@scilearn/learnflow-sdk/lib/Tree/ITickResult";
-import { IBaseNodeOptions } from "@scilearn/learnflow-sdk/lib/Tree/Nodes/Abstracts/OptionInterfaces";
-import MetadataNode from "@scilearn/learnflow-sdk/lib/Tree/Nodes/MetadataNode";
-import Status from "@scilearn/learnflow-sdk/lib/Tree/Status";
-import Tick from "@scilearn/learnflow-sdk/lib/Tree/Tick";
 import * as _ from "lodash";
+import { IBaseNodeOptions } from "@scilearn/learnflow-sdk/lib/Tree/Nodes/Abstracts/OptionInterfaces";
+import Tick from "@scilearn/learnflow-sdk/lib/Tree/Tick";
+import Status from "@scilearn/learnflow-sdk/lib/Tree/Status";
+import ITickResult from "@scilearn/learnflow-sdk/lib/Tree/ITickResult";
+import MetadataNode from "@scilearn/learnflow-sdk/lib/Tree/Nodes/MetadataNode";
+import RandomizationHelper from "@scilearn/learnflow-sdk/lib/helpers/RandomizationHelper";
+
 /**
- * @desc
- * Round starts with a scrambled word(displayOnly) followed by 10 sequential words.
- * 90% correct criteria (9/10).
+ * @DESC BeginnerLevelNode serves Blocks sequentially
+ * each Block is a unit
+ * Failed unit is immediately repeated upto 3 times until passed.
+ * At the end of the exercise failed units are served again.
  */
-
-export default class MRBlock extends MetadataNode {
-	options: IMRBlockOptions;
-	constructor(id, options: IMRBlockOptions) {
+export default class MRBrginnerLevel extends MetadataNode {
+	options: IBaseNodeOptions;
+	constructor(id, options: IBaseNodeOptions) {
 		super(id, options);
-		this.options = options;
-	}
-
-	public open(tick: Tick): void {
-		this.initFromState(tick);
-		this.initChildMetadata(tick);
-	}
-
-	protected initFromState(tick: Tick): void {
-		this.childrenMetadata = tick.blackboard.get("childrenMetadata", tick.tree.id, this.id);
-		this.unvisitedNodes =
-			tick.blackboard.get("unvisitedNodes", tick.tree.id, this.id) ||
-			RandomizationHelper.shuffle(_.range(this.children.length)).slice(0, 20);
-		this.passedNodes = tick.blackboard.get("passedNodes", tick.tree.id, this.id) || [];
-		this.failedNodes = tick.blackboard.get("failedNodes", tick.tree.id, this.id) || [];
-	}
-
-	public enter(tick: Tick): void {
-		this.initFromState(tick);
-		this.initChildMetadata(tick);
 	}
 
 	protected getNextChildIndex(tick: Tick): number {
@@ -47,7 +28,7 @@ export default class MRBlock extends MetadataNode {
 		return this.unvisitedNodes[0];
 	}
 
-	// It check current child is in running state
+	// Checks if current child is in running state
 	private isRunning(currentChildIndex: number): boolean {
 		return this.childrenMetadata[currentChildIndex].status === Status.RUNNING;
 	}
@@ -59,7 +40,7 @@ export default class MRBlock extends MetadataNode {
 	 *    SUCCESS
 	 *    FAILURE
 	 *    RUNNING
-	 * @memberof MRLevel
+	 * @memberof RandomRepeatUntilSuccess
 	 */
 	tick(tick: Tick): ITickResult {
 		let payload = [];
@@ -72,23 +53,28 @@ export default class MRBlock extends MetadataNode {
 		result = this.children[nextChildIndex]._execute(tick);
 		this.updateChildMetadata(result, nextChildIndex);
 
+		this.updatePassedUnits(result.status, tick, this.children[nextChildIndex].id);
 		tick.blackboard.set("childrenMetadata", this.childrenMetadata, tick.tree.id, this.id);
 
-		// Round complete
+		// BegginerLevel end
 		if (this.unvisitedNodes.length === 0) {
-			let unitStatus = this.evaluateNode(tick);
-			this.updateUnvisitedNodes(tick);
-			// completionUnitEvaluator.updateUnitStatus(tick.blackboard, unitStatus, `id`);
-			if (unitStatus === Status.FAILURE) {
-				this.reset(tick);
-				this.unvisitedNodes.length = 20;
+			// BegginerLevel passed
+			if (this.failedNodes.length === 0) {
+				return {
+					payload: payload.concat(result.payload),
+					status: Status.SUCCESS,
+				};
 			}
-			return {
-				payload: payload.concat(result.payload),
-				status: unitStatus,
-			};
+			// BegginerLevel failed
+			else if (this.checkIfLevelFailed()) {
+				this.updateUnvisitedNodes(tick);
+				return {
+					payload: payload.concat(result.payload),
+					status: Status.FAILURE,
+				};
+			}
 		}
-		// Round still running
+		// BegginerLevel running
 		return {
 			status: Status.RUNNING,
 			payload: payload.concat(result.payload),
@@ -109,7 +95,7 @@ export default class MRBlock extends MetadataNode {
 		tick.blackboard.set("childrenMetadata", this.childrenMetadata, tick.tree.id, this.id);
 	}
 
-	protected updateChildMetadata(result: ITickResult, servedChildIndex): void {
+	updateChildMetadata(result: ITickResult, servedChildIndex): void {
 		let failCount = this.childrenMetadata[servedChildIndex].failCount;
 		let serveCount = this.childrenMetadata[servedChildIndex].serveCount;
 
@@ -120,8 +106,10 @@ export default class MRBlock extends MetadataNode {
 				_.remove(this.failedNodes, (childIndex) => childIndex === servedChildIndex);
 				this.passedNodes.push(servedChildIndex);
 			case Status.FAILURE:
-				this.failedNodes.push(servedChildIndex);
-				failCount++;
+				failCount = (failCount + 1) % 3;
+				if (failCount === 1) {
+					this.failedNodes.push(servedChildIndex);
+				}
 			default:
 				_.remove(this.unvisitedNodes, (childIndex) => childIndex === servedChildIndex);
 				serveCount++;
@@ -134,8 +122,23 @@ export default class MRBlock extends MetadataNode {
 			status: result.status,
 		});
 	}
-}
 
-export interface IMRBlockOptions extends IBaseNodeOptions {
-	percentCorrect: number;
+	private checkIfLevelFailed(): boolean {
+		let levelFailed = !!this.failedNodes.length;
+		this.failedNodes.forEach((child) => {
+			if (this.childrenMetadata[child].failCount !== 0) {
+				levelFailed = false;
+			}
+		});
+		return levelFailed;
+	}
+
+	// increment passed unit on success
+	private updatePassedUnits(status: Status, tick: Tick, id: string): void {
+		if (status === Status.SUCCESS) {
+			tick.blackboard.set("passedUnits", (tick.blackboard.get("passedUnits") || 0) + 1);
+			// for debugging
+			tick.blackboard.set("passedUnitsArr", (tick.blackboard.get("passedUnitsArr") || []).push(id));
+		}
+	}
 }

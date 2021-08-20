@@ -1,4 +1,3 @@
-import RandomizationHelper from "@scilearn/learnflow-sdk/lib/helpers/RandomizationHelper";
 import ITickResult from "@scilearn/learnflow-sdk/lib/Tree/ITickResult";
 import { IBaseNodeOptions } from "@scilearn/learnflow-sdk/lib/Tree/Nodes/Abstracts/OptionInterfaces";
 import MetadataNode from "@scilearn/learnflow-sdk/lib/Tree/Nodes/MetadataNode";
@@ -7,34 +6,15 @@ import Tick from "@scilearn/learnflow-sdk/lib/Tree/Tick";
 import * as _ from "lodash";
 /**
  * @desc
- * Round starts with a scrambled word(displayOnly) followed by 10 sequential words.
- * 90% correct criteria (9/10).
+ * Level will serve beginner/advanced blockNodes in order.
+ * Level fails if a block node fails.
+ * level will be served again at the end with failed block nodes
  */
 
-export default class MRBlock extends MetadataNode {
-	options: IMRBlockOptions;
-	constructor(id, options: IMRBlockOptions) {
+export default class MRLevel extends MetadataNode {
+	options: IBaseNodeOptions;
+	constructor(id, options: IBaseNodeOptions) {
 		super(id, options);
-		this.options = options;
-	}
-
-	public open(tick: Tick): void {
-		this.initFromState(tick);
-		this.initChildMetadata(tick);
-	}
-
-	protected initFromState(tick: Tick): void {
-		this.childrenMetadata = tick.blackboard.get("childrenMetadata", tick.tree.id, this.id);
-		this.unvisitedNodes =
-			tick.blackboard.get("unvisitedNodes", tick.tree.id, this.id) ||
-			RandomizationHelper.shuffle(_.range(this.children.length)).slice(0, 20);
-		this.passedNodes = tick.blackboard.get("passedNodes", tick.tree.id, this.id) || [];
-		this.failedNodes = tick.blackboard.get("failedNodes", tick.tree.id, this.id) || [];
-	}
-
-	public enter(tick: Tick): void {
-		this.initFromState(tick);
-		this.initChildMetadata(tick);
 	}
 
 	protected getNextChildIndex(tick: Tick): number {
@@ -74,21 +54,25 @@ export default class MRBlock extends MetadataNode {
 
 		tick.blackboard.set("childrenMetadata", this.childrenMetadata, tick.tree.id, this.id);
 
-		// Round complete
+		// level end
 		if (this.unvisitedNodes.length === 0) {
-			let unitStatus = this.evaluateNode(tick);
-			this.updateUnvisitedNodes(tick);
-			// completionUnitEvaluator.updateUnitStatus(tick.blackboard, unitStatus, `id`);
-			if (unitStatus === Status.FAILURE) {
-				this.reset(tick);
-				this.unvisitedNodes.length = 20;
+			// level passed
+			if (this.failedNodes.length === 0) {
+				return {
+					payload: payload.concat(result.payload),
+					status: Status.SUCCESS,
+				};
 			}
-			return {
-				payload: payload.concat(result.payload),
-				status: unitStatus,
-			};
+			// level failed
+			else {
+				this.updateUnvisitedNodes(tick);
+				return {
+					payload: payload.concat(result.payload),
+					status: Status.FAILURE,
+				};
+			}
 		}
-		// Round still running
+		// level still running
 		return {
 			status: Status.RUNNING,
 			payload: payload.concat(result.payload),
@@ -109,7 +93,7 @@ export default class MRBlock extends MetadataNode {
 		tick.blackboard.set("childrenMetadata", this.childrenMetadata, tick.tree.id, this.id);
 	}
 
-	protected updateChildMetadata(result: ITickResult, servedChildIndex): void {
+	updateChildMetadata(result: ITickResult, servedChildIndex): void {
 		let failCount = this.childrenMetadata[servedChildIndex].failCount;
 		let serveCount = this.childrenMetadata[servedChildIndex].serveCount;
 
@@ -134,8 +118,4 @@ export default class MRBlock extends MetadataNode {
 			status: result.status,
 		});
 	}
-}
-
-export interface IMRBlockOptions extends IBaseNodeOptions {
-	percentCorrect: number;
 }

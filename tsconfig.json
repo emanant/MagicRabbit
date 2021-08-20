@@ -1,23 +1,14 @@
 {
-    "compilerOptions": {
-        "target": "es5",
-        "module": "commonjs",
-        "sourceMap": true,
-        "emitDecoratorMetadata": true,
-        "experimentalDecorators": true,
-        "strictNullChecks": true,
-        "skipLibCheck": true
-    },
-    "filesGlob": [
-        "**/*.ts",
-        "**/*.tsx",
-        "!node_modules/**"
-    ],
-    "include": [
-        "**/*.ts",
-        "node_modules/@scilearn/ngffwd-node-processes/cocos2d/**/*.ts"
-    ],
-    "exclude": [
-        "**/__tests__/*.ts"
-    ]
+	"compilerOptions": {
+		"target": "es5",
+		"module": "commonjs",
+		"sourceMap": true,
+		"emitDecoratorMetadata": true,
+		"experimentalDecorators": true,
+		"strictNullChecks": true,
+		"skipLibCheck": true
+	},
+	"filesGlob": ["**/*.ts", "**/*.tsx", "!node_modules/**"],
+	"include": ["**/*.ts", "node_modules/@scilearn/ngffwd-node-processes/cocos2d/**/*.ts"],
+	"exclude": ["**/__tests__/*.ts"]
 }

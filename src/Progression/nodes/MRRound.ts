@@ -11,110 +11,109 @@ import * as _ from "lodash";
  */
 
 export default class MRRound extends MetadataNode {
-    options: IMRRoundOptions;
-    constructor(id, options: IMRRoundOptions) {
-        super(id, options);
-        this.options = options;
-    }
+	options: IMRRoundOptions;
+	constructor(id, options: IMRRoundOptions) {
+		super(id, options);
+		this.options = options;
+	}
 
-    protected getNextChildIndex(tick: Tick): number {
-        let currentChildIndex = tick.blackboard.get("runningChild", tick.tree.id, this.id) || 0;
-        if (currentChildIndex !== undefined && this.isRunning(currentChildIndex)) {
-            return currentChildIndex;
-        }
+	protected getNextChildIndex(tick: Tick): number {
+		let currentChildIndex = tick.blackboard.get("runningChild", tick.tree.id, this.id) || 0;
+		if (currentChildIndex !== undefined && this.isRunning(currentChildIndex)) {
+			return currentChildIndex;
+		}
 
-        // select next child from unvisitedNodes array
-        return this.unvisitedNodes[0];
-    }
+		// select next child from unvisitedNodes array
+		return this.unvisitedNodes[0];
+	}
 
-    // It check current child is in running state
-    private isRunning(currentChildIndex: number): boolean {
-        return this.childrenMetadata[currentChildIndex].status === Status.RUNNING;
-    }
+	// It check current child is in running state
+	private isRunning(currentChildIndex: number): boolean {
+		return this.childrenMetadata[currentChildIndex].status === Status.RUNNING;
+	}
 
-    /**
-     *
-     * @param {Tick} tick
-     * @returns {ITickResult}
-     *    SUCCESS
-     *    FAILURE
-     *    RUNNING
-     * @memberof MRLevel
-     */
-    tick(tick: Tick): ITickResult {
-        let payload = [];
-        let result: ITickResult;
-        let nextChildIndex = this.getNextChildIndex(tick);
-        // --------------------------------------------------
-        tick.blackboard.set("runningChild", nextChildIndex, tick.tree.id, this.id);
+	/**
+	 *
+	 * @param {Tick} tick
+	 * @returns {ITickResult}
+	 *    SUCCESS
+	 *    FAILURE
+	 *    RUNNING
+	 * @memberof MRLevel
+	 */
+	tick(tick: Tick): ITickResult {
+		let payload = [];
+		let result: ITickResult;
+		let nextChildIndex = this.getNextChildIndex(tick);
+		// --------------------------------------------------
+		tick.blackboard.set("runningChild", nextChildIndex, tick.tree.id, this.id);
 
-        this.setChildMetadata(nextChildIndex, { status: Status.RUNNING });
-        result = this.children[nextChildIndex]._execute(tick);
-        this.updateChildMetadata(result, nextChildIndex);
+		this.setChildMetadata(nextChildIndex, { status: Status.RUNNING });
+		result = this.children[nextChildIndex]._execute(tick);
+		this.updateChildMetadata(result, nextChildIndex);
 
-        tick.blackboard.set("childrenMetadata", this.childrenMetadata, tick.tree.id, this.id);
+		tick.blackboard.set("childrenMetadata", this.childrenMetadata, tick.tree.id, this.id);
 
-        // Round complete
-        if (this.unvisitedNodes.length === 0) {
-            let unitStatus = this.evaluateNode(tick);
-            this.updateUnvisitedNodes(tick);
-            // completionUnitEvaluator.updateUnitStatus(tick.blackboard, unitStatus, `id`);
-            if (unitStatus === Status.FAILURE) {
-                this.reset(tick);
-            }
-            return {
-                payload: payload.concat(result.payload),
-                status: unitStatus,
-            };
-        }
-        // Round still running
-        return {
-            status: Status.RUNNING,
-            payload: payload.concat(result.payload),
-        };
-    }
+		// Round complete
+		if (this.unvisitedNodes.length === 0) {
+			let unitStatus = this.evaluateNode(tick);
+			this.updateUnvisitedNodes(tick);
+			if (unitStatus === Status.FAILURE) {
+				this.reset(tick);
+			}
+			return {
+				payload: payload.concat(result.payload),
+				status: unitStatus,
+			};
+		}
+		// Round still running
+		return {
+			status: Status.RUNNING,
+			payload: payload.concat(result.payload),
+		};
+	}
 
-    private updateUnvisitedNodes(tick: Tick): void {
-        this.unvisitedNodes = this.failedNodes;
-        this.failedNodes = [];
-        tick.blackboard.set("unvisitedNodes", this.unvisitedNodes, tick.tree.id, this.id);
-        tick.blackboard.set("failedNodes", this.failedNodes, tick.tree.id, this.id);
+	private updateUnvisitedNodes(tick: Tick): void {
+		this.unvisitedNodes = this.failedNodes;
+		this.failedNodes = [];
+		tick.blackboard.set("unvisitedNodes", this.unvisitedNodes, tick.tree.id, this.id);
+		tick.blackboard.set("failedNodes", this.failedNodes, tick.tree.id, this.id);
 
-        this.unvisitedNodes.forEach((childIndex) => {
-            this.setChildMetadata(childIndex, {
-                status: undefined,
-            });
-        });
-        tick.blackboard.set("childrenMetadata", this.childrenMetadata, tick.tree.id, this.id);
-    }
+		this.unvisitedNodes.forEach((childIndex) => {
+			this.setChildMetadata(childIndex, {
+				status: undefined,
+			});
+		});
+		tick.blackboard.set("childrenMetadata", this.childrenMetadata, tick.tree.id, this.id);
+	}
 
-    updateChildMetadata(result: ITickResult, servedChildIndex): void {
-        let failCount = this.childrenMetadata[servedChildIndex].failCount;
-        let serveCount = this.childrenMetadata[servedChildIndex].serveCount;
+	updateChildMetadata(result: ITickResult, servedChildIndex): void {
+		let failCount = this.childrenMetadata[servedChildIndex].failCount;
+		let serveCount = this.childrenMetadata[servedChildIndex].serveCount;
 
-        switch (result.status) {
-            case Status.RUNNING:
-                break;
-            case Status.SUCCESS:
-                _.remove(this.failedNodes, (childIndex) => childIndex === servedChildIndex);
-                this.passedNodes.push(servedChildIndex);
-            case Status.FAILURE:
-                this.failedNodes.push(servedChildIndex);
-                failCount++;
-            default:
-                _.remove(this.unvisitedNodes, (childIndex) => childIndex === servedChildIndex);
-                serveCount++;
-                break;
-        }
+		switch (result.status) {
+			case Status.RUNNING:
+				break;
+			case Status.SUCCESS:
+				_.remove(this.failedNodes, (childIndex) => childIndex === servedChildIndex);
+				this.passedNodes.push(servedChildIndex);
+			case Status.FAILURE:
+				this.failedNodes.push(servedChildIndex);
+				failCount++;
+			default:
+				_.remove(this.unvisitedNodes, (childIndex) => childIndex === servedChildIndex);
+				serveCount++;
+				break;
+		}
 
-        this.setChildMetadata(servedChildIndex, {
-            serveCount: serveCount,
-            failCount: failCount,
-            status: result.status,
-        });
-    }
+		this.setChildMetadata(servedChildIndex, {
+			serveCount: serveCount,
+			failCount: failCount,
+			status: result.status,
+		});
+	}
 }
 
 export interface IMRRoundOptions extends IBaseNodeOptions {
-    percentCorrect: number;
+	percentCorrect: number;
 }
