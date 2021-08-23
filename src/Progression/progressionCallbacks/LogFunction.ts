@@ -1,8 +1,8 @@
 import * as _ from "lodash";
-import { GamePost } from "../../BuzzFlyHC/model/ProgressionTypes";
-import GameSummarizer from "../../BuzzFlyHC/service/summarizer/GameSummarizer";
-import { ProgressionContentRegex } from "../../BuzzFlyHC/service/summarizer/ProgressionContentRegex";
-import { ICompletionUnit } from "../../BuzzFlyHC/service/interface/ICompletionUnit";
+import { GamePost } from "../../MagicRabbit/model/ProgressionTypes";
+import GameSummarizer from "../../MagicRabbit/service/summarizer/GameSummarizer";
+import { ProgressionContentRegex } from "../../MagicRabbit/service/summarizer/ProgressionContentRegex";
+import { ICompletionUnit } from "../../MagicRabbit/service/interface/ICompletionUnit";
 import { UnitType } from "@scilearn/learnflow-sdk/lib/helpers/TypesAndIdentifiers";
 import { UnitStatus } from "@scilearn/learnflow-sdk/lib/helpers/TypesAndIdentifiers";
 
