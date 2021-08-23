@@ -21,11 +21,21 @@ export default class MRBrginnerLevel extends MetadataNode {
 
 	protected getNextChildIndex(tick: Tick): number {
 		let currentChildIndex = tick.blackboard.get("runningChild", tick.tree.id, this.id);
+		console.log("Running Block: ", currentChildIndex);
 		if (currentChildIndex !== undefined && this.isRunning(currentChildIndex)) {
 			return currentChildIndex;
 		}
 
-		// select next child from unvisitedNodes array
+		// serve failed Block immediately upto 3 times
+		if (this.failedNodes.length) {
+			const lastFailedChildIndex = this.failedNodes[this.failedNodes.length - 1];
+			// pbt not reached
+			if (this.childrenMetadata[lastFailedChildIndex].failCount === 0) {
+				console.log("Block ", lastFailedChildIndex, " Reserved");
+
+				return lastFailedChildIndex;
+			}
+		}
 		return this.unvisitedNodes[0];
 	}
 
@@ -52,15 +62,20 @@ export default class MRBrginnerLevel extends MetadataNode {
 
 		this.setChildMetadata(nextChildIndex, { status: Status.RUNNING });
 		result = this.children[nextChildIndex]._execute(tick);
+		// console.log(`EVAL: BEGINNER LEVEL Block-${nextChildIndex} `, Status[result.status]);
+
 		this.updateChildMetadata(result, nextChildIndex);
 
 		this.updatePassedUnits(result.status, tick, this.children[nextChildIndex].id);
 		tick.blackboard.set("childrenMetadata", this.childrenMetadata, tick.tree.id, this.id);
 
+		console.log("Block U P F: ", this.unvisitedNodes, this.passedNodes, this.failedNodes);
+
 		// BegginerLevel end
 		if (this.unvisitedNodes.length === 0) {
 			// BegginerLevel passed
 			if (this.failedNodes.length === 0) {
+				// console.log("LEVEL PASSED");
 				return {
 					payload: payload.concat(result.payload),
 					status: Status.SUCCESS,
@@ -75,7 +90,7 @@ export default class MRBrginnerLevel extends MetadataNode {
 				};
 			}
 		}
-		console.log("FAILED NODES:", this.failedNodes);
+		// console.log("FAILED NODES:", this.failedNodes);
 
 		// BegginerLevel running
 		return {
@@ -133,6 +148,7 @@ export default class MRBrginnerLevel extends MetadataNode {
 				levelFailed = false;
 			}
 		});
+		console.log("Level Failed ", levelFailed);
 		return levelFailed;
 	}
 

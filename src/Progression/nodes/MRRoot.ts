@@ -20,6 +20,8 @@ export default class MRRoot extends MetadataNode {
 
 	protected getNextChildIndex(tick: Tick): number {
 		let currentChildIndex = tick.blackboard.get("runningChild", tick.tree.id, this.id) || 0;
+		console.log("Running Level ", currentChildIndex);
+
 		if (currentChildIndex !== undefined && this.isRunning(currentChildIndex)) {
 			return currentChildIndex;
 		}
@@ -51,15 +53,20 @@ export default class MRRoot extends MetadataNode {
 
 		this.setChildMetadata(nextChildIndex, { status: Status.RUNNING });
 		result = this.children[nextChildIndex]._execute(tick);
+		console.log(`EVAL: Root Level-${nextChildIndex} `, Status[result.status]);
+
 		this.updateChildMetadata(result, nextChildIndex);
 
 		this.updatepassedLevels(tick);
-		tick.blackboard.set("childrenMetadata", this.childrenMetadata, tick.tree.id, this.id);
+		// tick.blackboard.set("childrenMetadata", this.childrenMetadata, tick.tree.id, this.id);
+
+		console.log("LEVEL U P F: ", this.unvisitedNodes, this.passedNodes, this.failedNodes);
 
 		// Game end
 		if (this.unvisitedNodes.length === 0) {
 			// Game passed
 			if (this.failedNodes.length === 0) {
+				// console.log("GAME PASSED");
 				return {
 					payload: payload.concat(result.payload),
 					status: Status.SUCCESS,
@@ -70,6 +77,8 @@ export default class MRRoot extends MetadataNode {
 				this.updateUnvisitedNodes(tick);
 			}
 		}
+		console.log("Level Running");
+
 		// Game running
 		return {
 			status: Status.RUNNING,

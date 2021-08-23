@@ -41,7 +41,7 @@ let tutorialNode = reducers.getTutorialNode();
 // create game play node
 let gameNode = {
 	id: "B_2",
-	type: "InternalNodeSequencer",
+	type: "MRRoot",
 	description: "MR root node",
 	guard: "(!${GamePlayComplete})",
 	onPassChangeBy: [

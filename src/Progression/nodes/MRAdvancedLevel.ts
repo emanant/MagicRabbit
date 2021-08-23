@@ -43,10 +43,15 @@ export default class MRAdvancedLevel extends MetadataNode {
 			return currentChildIndex;
 		}
 
-		// serve failed Block immediately upto 3 times
-		const lastFailedChildIndex = this.failedNodes[this.failedNodes.length - 1];
-		const pbtReached = this.childrenMetadata[lastFailedChildIndex].failCount === 0;
-		return pbtReached ? this.unvisitedNodes[0] : lastFailedChildIndex;
+		// serve failed Block(Round) immediately upto 3 times
+		if (this.failedNodes.length) {
+			const lastFailedChildIndex = this.failedNodes[this.failedNodes.length - 1];
+			// pbt not reached
+			if (this.childrenMetadata[lastFailedChildIndex].failCount === 0) {
+				return lastFailedChildIndex;
+			}
+		}
+		return this.unvisitedNodes[0];
 	}
 
 	// Checks if current child is in running state

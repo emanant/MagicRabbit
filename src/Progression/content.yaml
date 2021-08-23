@@ -3,6 +3,9 @@
   fileType: "content"
   type: "UnguardedNodeServer"
   description: "Root Node"
+  onSuccessChange: 1
+  onFailureChange: 0
+  onGuardedChange: 1
   tags: 
     - "AllItems"
   children: 
@@ -27,7 +30,7 @@
             foil3: ""
     - 
       id: "B_2"
-      type: "InternalNodeSequencer"
+      type: "MRRoot"
       description: "MR root node"
       guard: "(!${GamePlayComplete})"
       onPassChangeBy: 

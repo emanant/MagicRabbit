@@ -39,11 +39,13 @@ export default class MRBlock extends MetadataNode {
 	}
 
 	protected getNextChildIndex(tick: Tick): number {
-		let currentChildIndex = tick.blackboard.get("runningChild", tick.tree.id, this.id) || 0;
+		let currentChildIndex = tick.blackboard.get("runningChild", tick.tree.id, this.id);
+		console.log("Running Trial: ", currentChildIndex);
 		if (currentChildIndex !== undefined && this.isRunning(currentChildIndex)) {
 			return currentChildIndex;
 		}
 
+		console.log("Running first from unvisited: ", this.unvisitedNodes, this.passedNodes, this.failedNodes);
 		// select next child from unvisitedNodes array
 		return this.unvisitedNodes[0];
 	}
@@ -75,21 +77,26 @@ export default class MRBlock extends MetadataNode {
 
 		tick.blackboard.set("childrenMetadata", this.childrenMetadata, tick.tree.id, this.id);
 
-		// Round complete
+		console.log("Trials U P F: ", this.unvisitedNodes, this.passedNodes, this.failedNodes);
+
+		// Block complete
 		if (this.unvisitedNodes.length === 0) {
 			let unitStatus = this.evaluateNode(tick);
 			this.updateUnvisitedNodes(tick);
 			// completionUnitEvaluator.updateUnitStatus(tick.blackboard, unitStatus, `id`);
+			// Block failed
 			if (unitStatus === Status.FAILURE) {
 				this.reset(tick);
 				this.unvisitedNodes.length = 20;
 			}
+			// Block passed
+			// console.log("BLOCK PASSED");
 			return {
 				payload: payload.concat(result.payload),
 				status: unitStatus,
 			};
 		}
-		// Round still running
+		// Block still running
 		return {
 			status: Status.RUNNING,
 			payload: payload.concat(result.payload),
@@ -141,10 +148,12 @@ export default class MRBlock extends MetadataNode {
 		var totalPassedTrials = this.passedNodes.length;
 		// var totalTrials = TRIALS_PER_BLOCK;
 		var totalTrials = this.passedNodes.length + this.unvisitedNodes.length + this.failedNodes.length;
-		console.log("EVAL:", totalTrials, totalPassedTrials);
+		console.log("EVAL:", totalTrials, totalPassedTrials, percentCorrect);
 		if (totalPassedTrials / totalTrials >= percentCorrect / 100) {
+			console.log("EVAL: BLOCK PASSED");
 			return Status.SUCCESS;
 		} else {
+			console.log("EVAL: BLOCK FAILED");
 			return Status.FAILURE;
 		}
 	}
