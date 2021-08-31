@@ -59,7 +59,7 @@ export default class MRBrginnerLevel extends MetadataNode {
 		tick.blackboard.set("runningChild", nextChildIndex, tick.tree.id, this.id);
 
 		this.setChildMetadata(nextChildIndex, { status: Status.RUNNING });
-		console.log("BL nextchild", nextChildIndex);
+		// console.log("BL nextchild", nextChildIndex);
 		
 		result = this.children[nextChildIndex]._execute(tick);
 
@@ -139,7 +139,7 @@ export default class MRBrginnerLevel extends MetadataNode {
 	private checkIfLevelFailed(): boolean {
 		let levelFailed = !!this.failedNodes.length;
 		this.failedNodes.forEach((child) => {
-			if (this.childrenMetadata[child].failCount !== 0) {
+			if (this.childrenMetadata[child].failCount < 3) {
 				levelFailed = false;
 			}
 		});
