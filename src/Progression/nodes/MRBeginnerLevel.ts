@@ -21,27 +21,25 @@ export default class MRBrginnerLevel extends MetadataNode {
 
 	protected getNextChildIndex(tick: Tick): number {
 		let currentChildIndex = tick.blackboard.get("runningChild", tick.tree.id, this.id);
-		console.log("Running Block: ", currentChildIndex);
-		if (currentChildIndex !== undefined && this.isRunning(currentChildIndex)) {
+		// serve failed Block immediately upto 3 times
+		if (
+			currentChildIndex !== undefined &&
+			(this.isRunning(currentChildIndex) ||
+				(this.isFailure(currentChildIndex) && this.childrenMetadata[currentChildIndex].failCount < 3))
+		) {
 			return currentChildIndex;
 		}
-
-		// serve failed Block immediately upto 3 times
-		if (this.failedNodes.length) {
-			const lastFailedChildIndex = this.failedNodes[this.failedNodes.length - 1];
-			// pbt not reached
-			if (this.childrenMetadata[lastFailedChildIndex].failCount === 0) {
-				console.log("Block ", lastFailedChildIndex, " Reserved");
-
-				return lastFailedChildIndex;
-			}
-		}
+		// serve unvisited nodes
 		return this.unvisitedNodes[0];
 	}
 
 	// Checks if current child is in running state
 	private isRunning(currentChildIndex: number): boolean {
 		return this.childrenMetadata[currentChildIndex].status === Status.RUNNING;
+	}
+	// Checks if current child is in running state
+	private isFailure(currentChildIndex: number): boolean {
+		return this.childrenMetadata[currentChildIndex].status === Status.FAILURE;
 	}
 
 	/**
@@ -61,21 +59,20 @@ export default class MRBrginnerLevel extends MetadataNode {
 		tick.blackboard.set("runningChild", nextChildIndex, tick.tree.id, this.id);
 
 		this.setChildMetadata(nextChildIndex, { status: Status.RUNNING });
+		console.log("BL nextchild", nextChildIndex);
+		
 		result = this.children[nextChildIndex]._execute(tick);
-		// console.log(`EVAL: BEGINNER LEVEL Block-${nextChildIndex} `, Status[result.status]);
 
 		this.updateChildMetadata(result, nextChildIndex);
 
 		this.updatePassedUnits(result.status, tick, this.children[nextChildIndex].id);
 		tick.blackboard.set("childrenMetadata", this.childrenMetadata, tick.tree.id, this.id);
 
-		console.log("Block U P F: ", this.unvisitedNodes, this.passedNodes, this.failedNodes);
 
 		// BegginerLevel end
 		if (this.unvisitedNodes.length === 0) {
 			// BegginerLevel passed
 			if (this.failedNodes.length === 0) {
-				// console.log("LEVEL PASSED");
 				return {
 					payload: payload.concat(result.payload),
 					status: Status.SUCCESS,
@@ -90,7 +87,6 @@ export default class MRBrginnerLevel extends MetadataNode {
 				};
 			}
 		}
-		// console.log("FAILED NODES:", this.failedNodes);
 
 		// BegginerLevel running
 		return {
@@ -98,7 +94,6 @@ export default class MRBrginnerLevel extends MetadataNode {
 			payload: payload.concat(result.payload),
 		};
 	}
-
 	private updateUnvisitedNodes(tick: Tick): void {
 		this.unvisitedNodes = this.failedNodes;
 		this.failedNodes = [];
@@ -108,6 +103,8 @@ export default class MRBrginnerLevel extends MetadataNode {
 		this.unvisitedNodes.forEach((childIndex) => {
 			this.setChildMetadata(childIndex, {
 				status: undefined,
+				failCount: 0,
+				serveCount: 0,
 			});
 		});
 		tick.blackboard.set("childrenMetadata", this.childrenMetadata, tick.tree.id, this.id);
@@ -123,10 +120,8 @@ export default class MRBrginnerLevel extends MetadataNode {
 				this.passedNodes.push(servedChildIndex);
 				break;
 			case Status.FAILURE:
-				failCount = (failCount + 1) % 3;
-				if (failCount === 1) {
-					this.failedNodes.push(servedChildIndex);
-				}
+				!failCount && this.failedNodes.push(servedChildIndex);
+				failCount++;
 				break;
 		}
 		if (result.status !== Status.RUNNING) {
@@ -148,7 +143,6 @@ export default class MRBrginnerLevel extends MetadataNode {
 				levelFailed = false;
 			}
 		});
-		console.log("Level Failed ", levelFailed);
 		return levelFailed;
 	}
 

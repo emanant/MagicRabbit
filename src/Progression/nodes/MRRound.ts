@@ -57,10 +57,12 @@ export default class MRRound extends MetadataNode {
 		// Round complete
 		if (this.unvisitedNodes.length === 0) {
 			let unitStatus = this.evaluateNode(tick);
-			this.updateUnvisitedNodes(tick);
+			// Round Passed
 			if (unitStatus === Status.FAILURE) {
+				this.updateUnvisitedNodes(tick);
 				this.reset(tick);
 			}
+			// Round Failed
 			return {
 				payload: payload.concat(result.payload),
 				status: unitStatus,
@@ -82,6 +84,8 @@ export default class MRRound extends MetadataNode {
 		this.unvisitedNodes.forEach((childIndex) => {
 			this.setChildMetadata(childIndex, {
 				status: undefined,
+				failCount: 0,
+				serveCount: 0,
 			});
 		});
 		tick.blackboard.set("childrenMetadata", this.childrenMetadata, tick.tree.id, this.id);

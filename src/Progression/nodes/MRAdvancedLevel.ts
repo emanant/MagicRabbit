@@ -7,8 +7,10 @@ import MetadataNode from "@scilearn/learnflow-sdk/lib/Tree/Nodes/MetadataNode";
 import RandomizationHelper from "@scilearn/learnflow-sdk/lib/helpers/RandomizationHelper";
 
 /**
- * @DESC BeginnerBlockNode serves BlockNode randomly
- * Failed texts are served again at the end of level
+ * @DESC AdvancedBlockNode serves RoundNode randomly
+ * each Round is a unit
+ * Failed unit is immediately repeated upto 3 times until passed.
+ * At the end of the exercise failed units are served again.
  */
 
 const ROUNDS_PER_BLOCK = 20;
@@ -39,17 +41,12 @@ export default class MRAdvancedLevel extends MetadataNode {
 
 	protected getNextChildIndex(tick: Tick): number {
 		let currentChildIndex = tick.blackboard.get("runningChild", tick.tree.id, this.id);
-		if (currentChildIndex !== undefined && this.isRunning(currentChildIndex)) {
+		if (
+			currentChildIndex !== undefined &&
+			(this.isRunning(currentChildIndex) ||
+				(this.isFailure(currentChildIndex) && this.childrenMetadata[currentChildIndex].failCount < 3))
+		) {
 			return currentChildIndex;
-		}
-
-		// serve failed Block(Round) immediately upto 3 times
-		if (this.failedNodes.length) {
-			const lastFailedChildIndex = this.failedNodes[this.failedNodes.length - 1];
-			// pbt not reached
-			if (this.childrenMetadata[lastFailedChildIndex].failCount === 0) {
-				return lastFailedChildIndex;
-			}
 		}
 		return this.unvisitedNodes[0];
 	}
@@ -57,6 +54,10 @@ export default class MRAdvancedLevel extends MetadataNode {
 	// Checks if current child is in running state
 	private isRunning(currentChildIndex: number): boolean {
 		return this.childrenMetadata[currentChildIndex].status === Status.RUNNING;
+	}
+	// Checks if current child is in running state
+	private isFailure(currentChildIndex: number): boolean {
+		return this.childrenMetadata[currentChildIndex].status === Status.FAILURE;
 	}
 
 	/**
@@ -116,6 +117,8 @@ export default class MRAdvancedLevel extends MetadataNode {
 			this.unvisitedNodes.forEach((childIndex) => {
 				this.setChildMetadata(childIndex, {
 					status: undefined,
+					failCount: 0,
+					serveCount: 0
 				});
 			});
 			tick.blackboard.set("childrenMetadata", this.childrenMetadata, tick.tree.id, this.id);
@@ -132,10 +135,8 @@ export default class MRAdvancedLevel extends MetadataNode {
 				_.remove(this.failedNodes, (childIndex) => childIndex === servedChildIndex);
 				break;
 			case Status.FAILURE:
-				failCount = (failCount + 1) % 3;
-				if (failCount === 1) {
-					this.failedNodes.push(servedChildIndex);
-				}
+				!failCount && this.failedNodes.push(servedChildIndex);
+				failCount++;
 				break;
 		}
 		if (result.status !== Status.RUNNING) {
@@ -153,7 +154,7 @@ export default class MRAdvancedLevel extends MetadataNode {
 	private checkIfLevelFailed(): boolean {
 		let levelFailed = !!this.failedNodes.length;
 		this.failedNodes.forEach((child) => {
-			if (this.childrenMetadata[child].failCount !== 0) {
+			if (this.childrenMetadata[child].failCount < 3) {
 				levelFailed = false;
 			}
 		});
